@@ -1,0 +1,170 @@
+{{#section "head"}}
+<style>
+#refresh-pr {
+ margin: 2em auto;
+ width: 400px;
+ position: relative;
+}
+
+#pr-url {
+ box-sizing: border-box;
+ width: 100%;
+}
+
+label.disabled-control {
+ color: gray;
+ cursor: default;
+}
+
+#refresh-pr input[type="submit"] {
+ display: block;
+ margin: 1em auto;
+}
+
+#result {
+ display: block;
+ white-space: pre-wrap;
+ height: 120px;
+}
+
+/*
+  whirly-loader
+  Derived from https://github.com/jlong/css-spinners/blob/551b7c7f834340526c412e0dba2adfe1b6e33904/css/spinner/whirly.css
+  MIT License: https://github.com/jlong/css-spinners/blob/551b7c7f834340526c412e0dba2adfe1b6e33904/LICENSE
+*/
+
+@keyframes whirly-loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.whirly-loader {
+  overflow: hidden;
+  position: relative;
+  text-indent: -9999px;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+
+  position: absolute;
+  top: calc(50% - 8px / 2);
+  left: calc(50% - 8px / 2);
+
+  background: transparent;
+  border-radius: 100%;
+  box-shadow: #3c790a 0px 26px 0 6px, #3c790a 0.90971px 26.05079px 0 5.93333px, #3c790a 1.82297px 26.06967px 0 5.86667px, #3c790a 2.73865px 26.05647px 0 5.8px, #3c790a 3.65561px 26.01104px 0 5.73333px, #3c790a 4.57274px 25.93327px 0 5.66667px, #3c790a 5.48887px 25.8231px 0 5.6px, #3c790a 6.40287px 25.68049px 0 5.53333px, #3c790a 7.31358px 25.50548px 0 5.46667px, #3c790a 8.21985px 25.2981px 0 5.4px, #3c790a 9.12054px 25.05847px 0 5.33333px, #3c790a 10.01448px 24.78672px 0 5.26667px, #3c790a 10.90054px 24.48302px 0 5.2px, #3c790a 11.77757px 24.1476px 0 5.13333px, #3c790a 12.64443px 23.78072px 0 5.06667px, #3c790a 13.5px 23.38269px 0 5px, #3c790a 14.34315px 22.95384px 0 4.93333px, #3c790a 15.17277px 22.49455px 0 4.86667px, #3c790a 15.98776px 22.00526px 0 4.8px, #3c790a 16.78704px 21.48643px 0 4.73333px, #3c790a 17.56953px 20.93855px 0 4.66667px, #3c790a 18.33418px 20.36217px 0 4.6px, #3c790a 19.07995px 19.75787px 0 4.53333px, #3c790a 19.80582px 19.12626px 0 4.46667px, #3c790a 20.5108px 18.468px 0 4.4px, #3c790a 21.1939px 17.78379px 0 4.33333px, #3c790a 21.85416px 17.07434px 0 4.26667px, #3c790a 22.49067px 16.34043px 0 4.2px, #3c790a 23.10251px 15.58284px 0 4.13333px, #3c790a 23.68881px 14.80241px 0 4.06667px, #3c790a 24.24871px 14.0px 0 4px, #3c790a 24.7814px 13.1765px 0 3.93333px, #3c790a 25.28607px 12.33284px 0 3.86667px, #3c790a 25.76198px 11.46997px 0 3.8px, #3c790a 26.2084px 10.58888px 0 3.73333px, #3c790a 26.62462px 9.69057px 0 3.66667px, #3c790a 27.01001px 8.77608px 0 3.6px, #3c790a 27.36392px 7.84648px 0 3.53333px, #3c790a 27.68577px 6.90284px 0 3.46667px, #3c790a 27.97502px 5.94627px 0 3.4px, #3c790a 28.23116px 4.97791px 0 3.33333px, #3c790a 28.4537px 3.99891px 0 3.26667px, #3c790a 28.64223px 3.01042px 0 3.2px, #3c790a 28.79635px 2.01364px 0 3.13333px, #3c790a 28.91571px 1.00976px 0 3.06667px, #3c790a 29px 0.0px 0 3px, #3c790a 29.04896px -1.01441px 0 2.93333px, #3c790a 29.06237px -2.03224px 0 2.86667px, #3c790a 29.04004px -3.05223px 0 2.8px, #3c790a 28.98185px -4.07313px 0 2.73333px, #3c790a 28.88769px -5.09368px 0 2.66667px, #3c790a 28.75754px -6.1126px 0 2.6px, #3c790a 28.59138px -7.12863px 0 2.53333px, #3c790a 28.38926px -8.14049px 0 2.46667px, #3c790a 28.15127px -9.1469px 0 2.4px, #3c790a 27.87755px -10.1466px 0 2.33333px, #3c790a 27.56827px -11.1383px 0 2.26667px, #3c790a 27.22365px -12.12075px 0 2.2px, #3c790a 26.84398px -13.09268px 0 2.13333px, #3c790a 26.42956px -14.05285px 0 2.06667px, #3c790a 25.98076px -15.0px 0 2px, #3c790a 25.49798px -15.93291px 0 1.93333px, #3c790a 24.98167px -16.85035px 0 1.86667px, #3c790a 24.43231px -17.75111px 0 1.8px, #3c790a 23.85046px -18.63402px 0 1.73333px, #3c790a 23.23668px -19.49789px 0 1.66667px, #3c790a 22.5916px -20.34157px 0 1.6px, #3c790a 21.91589px -21.16393px 0 1.53333px, #3c790a 21.21024px -21.96384px 0 1.46667px, #3c790a 20.4754px -22.74023px 0 1.4px, #3c790a 19.71215px -23.49203px 0 1.33333px, #3c790a 18.92133px -24.2182px 0 1.26667px, #3c790a 18.10379px -24.91772px 0 1.2px, #3c790a 17.26042px -25.58963px 0 1.13333px, #3c790a 16.39217px -26.23295px 0 1.06667px, #3c790a 15.5px -26.84679px 0 1px, #3c790a 14.58492px -27.43024px 0 0.93333px, #3c790a 13.64796px -27.98245px 0 0.86667px, #3c790a 12.69018px -28.50262px 0 0.8px, #3c790a 11.7127px -28.98995px 0 0.73333px, #3c790a 10.71663px -29.4437px 0 0.66667px, #3c790a 9.70313px -29.86317px 0 0.6px, #3c790a 8.67339px -30.2477px 0 0.53333px, #3c790a 7.6286px -30.59666px 0 0.46667px, #3c790a 6.57001px -30.90946px 0 0.4px, #3c790a 5.49886px -31.18558px 0 0.33333px, #3c790a 4.41643px -31.42451px 0 0.26667px, #3c790a 3.32401px -31.6258px 0 0.2px, #3c790a 2.22291px -31.78904px 0 0.13333px, #3c790a 1.11446px -31.91388px 0 0.06667px, #3c790a 0.0px -32px 0 0px, #3c790a -1.11911px -32.04713px 0 -0.06667px, #3c790a -2.24151px -32.05506px 0 -0.13333px, #3c790a -3.36582px -32.02361px 0 -0.2px, #3c790a -4.49065px -31.95265px 0 -0.26667px, #3c790a -5.61462px -31.84212px 0 -0.33333px, #3c790a -6.73634px -31.69198px 0 -0.4px, #3c790a -7.8544px -31.50227px 0 -0.46667px, #3c790a -8.9674px -31.27305px 0 -0.53333px, #3c790a -10.07395px -31.00444px 0 -0.6px, #3c790a -11.17266px -30.69663px 0 -0.66667px, #3c790a -12.26212px -30.34982px 0 -0.73333px, #3c790a -13.34096px -29.96429px 0 -0.8px, #3c790a -14.4078px -29.54036px 0 -0.86667px, #3c790a -15.46126px -29.07841px 0 -0.93333px, #3c790a -16.5px -28.57884px 0 -1px, #3c790a -17.52266px -28.04212px 0 -1.06667px, #3c790a -18.52792px -27.46878px 0 -1.13333px, #3c790a -19.51447px -26.85936px 0 -1.2px, #3c790a -20.48101px -26.21449px 0 -1.26667px, #3c790a -21.42625px -25.53481px 0 -1.33333px, #3c790a -22.34896px -24.82104px 0 -1.4px, #3c790a -23.2479px -24.07391px 0 -1.46667px, #3c790a -24.12186px -23.29421px 0 -1.53333px, #3c790a -24.96967px -22.48279px 0 -1.6px, #3c790a -25.79016px -21.64052px 0 -1.66667px, #3c790a -26.58223px -20.76831px 0 -1.73333px, #3c790a -27.34477px -19.86714px 0 -1.8px, #3c790a -28.07674px -18.938px 0 -1.86667px, #3c790a -28.7771px -17.98193px 0 -1.93333px, #3c790a -29.44486px -17.0px 0 -2px, #3c790a -30.07908px -15.99333px 0 -2.06667px, #3c790a -30.67884px -14.96307px 0 -2.13333px, #3c790a -31.24325px -13.91039px 0 -2.2px, #3c790a -31.7715px -12.83652px 0 -2.26667px, #3c790a -32.26278px -11.74269px 0 -2.33333px, #3c790a -32.71634px -10.63018px 0 -2.4px, #3c790a -33.13149px -9.5003px 0 -2.46667px, #3c790a -33.50755px -8.35437px 0 -2.53333px, #3c790a -33.84391px -7.19374px 0 -2.6px, #3c790a -34.14px -6.0198px 0 -2.66667px, #3c790a -34.39531px -4.83395px 0 -2.73333px, #3c790a -34.60936px -3.63759px 0 -2.8px, #3c790a -34.78173px -2.43218px 0 -2.86667px, #3c790a -34.91205px -1.21916px 0 -2.93333px, #3c790a -35px 0.0px 0 -3px, #3c790a -35.04531px 1.22381px 0 -3.06667px, #3c790a -35.04775px 2.45078px 0 -3.13333px, #3c790a -35.00717px 3.6794px 0 -3.2px, #3c790a -34.92345px 4.90817px 0 -3.26667px, #3c790a -34.79654px 6.13557px 0 -3.33333px, #3c790a -34.62643px 7.36007px 0 -3.4px, #3c790a -34.41316px 8.58016px 0 -3.46667px, #3c790a -34.15683px 9.79431px 0 -3.53333px, #3c790a -33.85761px 11.001px 0 -3.6px, #3c790a -33.5157px 12.19872px 0 -3.66667px, #3c790a -33.13137px 13.38594px 0 -3.73333px, #3c790a -32.70493px 14.56117px 0 -3.8px, #3c790a -32.23675px 15.72291px 0 -3.86667px, #3c790a -31.72725px 16.86968px 0 -3.93333px, #3c790a -31.17691px 18px 0 -4px, #3c790a -30.58627px 19.11242px 0 -4.06667px, #3c790a -29.95589px 20.2055px 0 -4.13333px, #3c790a -29.28642px 21.27783px 0 -4.2px, #3c790a -28.57852px 22.32799px 0 -4.26667px, #3c790a -27.83295px 23.35462px 0 -4.33333px, #3c790a -27.05047px 24.35635px 0 -4.4px, #3c790a -26.23192px 25.33188px 0 -4.46667px, #3c790a -25.37819px 26.27988px 0 -4.53333px, #3c790a -24.49018px 27.1991px 0 -4.6px, #3c790a -23.56888px 28.0883px 0 -4.66667px, #3c790a -22.6153px 28.94626px 0 -4.73333px, #3c790a -21.6305px 29.77183px 0 -4.8px, #3c790a -20.61558px 30.56385px 0 -4.86667px, #3c790a -19.57168px 31.32124px 0 -4.93333px, #3c790a -18.5px 32.04294px 0 -5px, #3c790a -17.40175px 32.72792px 0 -5.06667px, #3c790a -16.27818px 33.37522px 0 -5.13333px, #3c790a -15.1306px 33.98389px 0 -5.2px, #3c790a -13.96034px 34.55305px 0 -5.26667px, #3c790a -12.76875px 35.08186px 0 -5.33333px, #3c790a -11.55724px 35.56951px 0 -5.4px, #3c790a -10.32721px 36.01527px 0 -5.46667px, #3c790a -9.08014px 36.41843px 0 -5.53333px, #3c790a -7.81748px 36.77835px 0 -5.6px, #3c790a -6.54075px 37.09443px 0 -5.66667px, #3c790a -5.25147px 37.36612px 0 -5.73333px, #3c790a -3.95118px 37.59293px 0 -5.8px, #3c790a -2.64145px 37.77443px 0 -5.86667px, #3c790a -1.32385px 37.91023px 0 -5.93333px;
+  animation: whirly-loader 1.25s infinite linear;
+  transform-origin: 50% 50%;
+}
+</style>
+{{/section}}
+
+<h2>Participant Agreement status</h2>
+
+<p>You're likely on this page because a GitHub status check on a pull request you submitted was unable to associate you to a signed and verified agreement. Read on to find out what that's about, and the details of your situation.
+
+<h3>Introduction</h3>
+
+<p>The <a href="agreement">Participant Agreement</a> must be signed for all contributions to WHATWG Living Standards.
+
+<p>Contributors who work in the field of web technologies as an employee, contractor, or agent of another person or legal entity must have that entity fill out the agreement. Otherwise, it can be filled out as an individual.
+
+<p>After an agreement is submitted, it is verified by the WHATWG. This is a manual process, but is usually completed quickly if it's preventing a pull request from being accepted.
+
+
+<h3>Your Status</h3>
+
+<p>{{{status}}}</p>
+
+{{#if isNothing}}
+<p>If you think you are associated with an entity that has signed up to participate, then ensure that you have publicly displayed your affiliation with that entity's GitHub organization. For more information on how to do this, see the GitHub help article, "<a href="https://help.github.com/articles/publicizing-or-hiding-organization-membership/">Publicizing or hiding organization membership</a>".
+{{/if}}
+
+
+<h3>Synchronizing with GitHub</h3>
+
+<p>If the status check on your pull request is not in sync with the above, use this form to ask GitHub to update itself:
+
+<form id="refresh-pr">
+ <label>
+  Pull request URL:
+  <input type="url" required id="pr-url">
+ </label>
+
+ <input type="submit" value="Update">
+
+ <output id="result"></output>
+</form>
+
+<script>
+"use strict";
+(() => {
+ const form = document.querySelector("#refresh-pr");
+ const prURL = document.querySelector("#pr-url");
+ const result = document.querySelector("#result");
+ let loader;
+ let resultClearerTimeout;
+
+ document.querySelector("#refresh-pr").addEventListener("submit", e => {
+  e.preventDefault();
+  submit();
+ });
+
+ async function submit() {
+  setSpinner();
+
+  const res = await fetch("update-pr", {
+   method: "POST",
+   body: JSON.stringify({ pr: prURL.value }),
+   headers: {
+    "Content-Type": "application/json",
+    Accept: "application/json"
+   }
+  });
+
+  if (res.ok) {
+   result.value = "Pull request updated!";
+  } else {
+   const body = await res.json();
+   result.value = `Error encountered: ${body.statusMessage}`;
+   if (body.message) {
+    result.value += `\n\n${body.message}`;
+   }
+  }
+  resultClearerTimeout = setTimeout(() => result.value = "", 3000);
+
+  removeSpinner();
+ }
+
+ function setSpinner() {
+  loader = document.createElement("div");
+  loader.className = "whirly-loader";
+  form.appendChild(loader);
+
+  for (const input of Array.from(form.querySelectorAll("input"))) {
+   input.disabled = true;
+  }
+  for (const label of Array.from(form.querySelectorAll("label"))) {
+   label.classList.add("disabled-control");
+  }
+
+  result.value = "";
+  clearTimeout(resultClearerTimeout);
+ }
+
+ function removeSpinner() {
+  loader.remove();
+
+  for (const input of Array.from(form.querySelectorAll("input"))) {
+   input.disabled = false;
+  }
+  for (const label of Array.from(form.querySelectorAll("label"))) {
+   label.classList.remove("disabled-control");
+  }
+ }
+})();
+</script>

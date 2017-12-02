@@ -1,0 +1,15 @@
+<h2>Error: {{error.statusCode}} {{statusMessage}}</h2>
+
+{{#if showMessage}}
+<p>An error was encountered:
+
+<p><strong>{{error.message}}</strong>
+
+{{#if isConflict}}
+<p>If you believe that our existing information for you needs to be updated or is invalid, please file an issue on or send a pull request to <a href="https://github.com/{{publicDataRepo}}">{{publicDataRepo}}</a>.
+{{/if}}
+{{else if isInternal}}
+<p>An internal error was encountered processing your request. Please contact the server administrators by <a href="https://github.com/{{publicDataRepo}}/issues/new">filing an issue on {{publicDataRepo}}</a>.
+{{else}}
+<p>An error was encountered.
+{{/if}}

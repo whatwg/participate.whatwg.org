@@ -1,0 +1,18 @@
+{
+  "privateDataRepo": {
+    "owner": "",
+    "name": "",
+    "dataPath": ""
+  },
+  "gitHub": {
+    "username": "",
+    "accessToken": "",
+    "committer": {
+      "name": "",
+      "email": ""
+    }
+  },
+  "webhook": {
+    "secret": ""
+  }
+}

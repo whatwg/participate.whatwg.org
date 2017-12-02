@@ -1,0 +1,29 @@
+{
+  "name": "whatwg-workflow-prototype",
+  "version": "1.0.0-pre",
+  "description": "Prototype of the WHATWG contributor agreement and workstream signup workflow",
+  "author": "Domenic Denicola <d@domenic.me> (https://domenic.me/)",
+  "license": "Apache-2.0",
+  "scripts": {
+    "start": "node lib/app.js",
+    "lint": "eslint .",
+    "test": "jest",
+    "coverage": "jest --coverage"
+  },
+  "dependencies": {
+    "github": "^9.2.0",
+    "handlebars": "^4.0.10",
+    "http-errors": "^1.6.1",
+    "koa": "^2.3.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-handlebars": "^2.0.0",
+    "koa-router": "^7.2.1",
+    "listify": "^1.0.0",
+    "uuid": "^3.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.4.1",
+    "jest": "^20.0.4",
+    "lolex": "^2.1.2"
+  }
+}

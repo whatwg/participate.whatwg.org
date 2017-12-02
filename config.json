@@ -1,0 +1,73 @@
+{
+  "publicDataRepo": {
+    "owner": "whatwg",
+    "name": "participant-data",
+    "dataPath": ""
+  },
+  "serverURL": "https://participate.whatwg.org/",
+  "statusPath": "/agreement-status",
+  "steeringGroupEmail": "sg@whatwg.org",
+  "specOrg": "whatwg",
+  "workstreams": [
+    {
+      "id": "compat",
+      "name": "Compatibility"
+    },
+    {
+      "id": "console",
+      "name": "Console APIs"
+    },
+    {
+      "id": "dom",
+      "name": "DOM"
+    },
+    {
+      "id": "encoding",
+      "name": "Encoding"
+    },
+    {
+      "id": "fetch",
+      "name": "Fetch"
+    },
+    {
+      "id": "fullscreen",
+      "name": "Fullscreen API"
+    },
+    {
+      "id": "html",
+      "name": "HTML"
+    },
+    {
+      "id": "infra",
+      "name": "Infra"
+    },
+    {
+      "id": "mimesniff",
+      "name": "MIME Sniffing"
+    },
+    {
+      "id": "notifications",
+      "name": "Notifications"
+    },
+    {
+      "id": "quirks",
+      "name": "Quirks Mode"
+    },
+    {
+      "id": "storage",
+      "name": "Storage API"
+    },
+    {
+      "id": "streams",
+      "name": "Streams APIs"
+    },
+    {
+      "id": "url",
+      "name": "URL"
+    },
+    {
+      "id": "xhr",
+      "name": "XMLHttpRequest API"
+    }
+  ]
+}

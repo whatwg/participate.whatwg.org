@@ -1,0 +1,10 @@
+{
+  "files": [
+    "config.json",
+    "private-config.json",
+    "layouts",
+    "lib",
+    "views"
+  ],
+  "alias": "participate-dot-whatwg-dot-org"
+}
