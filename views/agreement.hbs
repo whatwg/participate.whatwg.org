@@ -349,12 +349,12 @@ input[type="submit"] {
    const date = document.querySelector(`#${type}-date`);
 
    function sync() {
-    if (container.open) {
-     otherContainer.open = false;
+    if (container.hasAttribute('open')) {
+     otherContainer.removeAttribute('open');
     }
 
     for (const typeForInputs of types) {
-     setInputsEnabledness(typeForInputs, containers[typeForInputs].open);
+     setInputsEnabledness(typeForInputs, containers[typeForInputs].hasAttribute('open'));
     }
 
     if (signature.value.trim().length > 0) {
