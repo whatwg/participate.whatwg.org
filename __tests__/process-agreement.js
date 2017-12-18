@@ -81,6 +81,58 @@ test("An individual with a signature mismatching the name must throw BadRequest"
   expect(() => submitAgreement(request)).toThrow(BadRequest);
 });
 
+test("An individual with a GitHub ID including @ must get normalized", () => {
+  const request = goodIndividualRequest();
+  request["individual-github"] = "@domenic";
+
+  const result = submitAgreement(request);
+
+  expect(result.publicData.info.gitHubID).toEqual("domenic");
+});
+
+test("An individual with a GitHub ID as a no-slash URL must get normalized", () => {
+  const request = goodIndividualRequest();
+  request["individual-github"] = "https://github.com/domenic";
+
+  const result = submitAgreement(request);
+
+  expect(result.publicData.info.gitHubID).toEqual("domenic");
+});
+
+test("An individual with a GitHub ID as a slash-suffixed URL must get normalized", () => {
+  const request = goodIndividualRequest();
+  request["individual-github"] = "https://github.com/domenic/";
+
+  const result = submitAgreement(request);
+
+  expect(result.publicData.info.gitHubID).toEqual("domenic");
+});
+
+test("An individual with a GitHub ID as a protocol-less slash-less URL must get normalized", () => {
+  const request = goodIndividualRequest();
+  request["individual-github"] = "github.com/domenic";
+
+  const result = submitAgreement(request);
+
+  expect(result.publicData.info.gitHubID).toEqual("domenic");
+});
+
+test("An individual with an otherwise-invalid GitHub ID must throw BadRequest", () => {
+  const request = goodIndividualRequest();
+
+  request["individual-github"] = "dom enic";
+  expect(() => submitAgreement(request)).toThrow(BadRequest);
+
+  request["individual-github"] = "domenic-";
+  expect(() => submitAgreement(request)).toThrow(BadRequest);
+
+  request["individual-github"] = "domenic@";
+  expect(() => submitAgreement(request)).toThrow(BadRequest);
+
+  request["individual-github"] = "https://domenic";
+  expect(() => submitAgreement(request)).toThrow(BadRequest);
+});
+
 // Entity
 
 function goodEntityRequest() {
@@ -221,6 +273,77 @@ test("An entity with a signature mismatching the signer name must throw BadReque
 
   expect(() => submitAgreement(request)).toThrow(BadRequest);
 });
+
+test("An entity with GitHub IDs including @s must get normalized", () => {
+  const request = goodEntityRequest();
+  request["entity-github-organization"] = "@contoso";
+  request["contact-1-github"] = "@ellencontoso";
+  request["contact-2-github"] = "@lisacontoso";
+
+  const result = submitAgreement(request);
+
+  expect(result.publicData.info.gitHubOrganization).toEqual("contoso");
+  expect(result.publicData.info.contact1.gitHubID).toEqual("ellencontoso");
+  expect(result.publicData.info.contact2.gitHubID).toEqual("lisacontoso");
+});
+
+test("An entity with GitHub IDs as no-slash URLs must get normalized", () => {
+  const request = goodEntityRequest();
+  request["entity-github-organization"] = "https://github.com/contoso";
+  request["contact-1-github"] = "https://github.com/ellencontoso";
+  request["contact-2-github"] = "https://github.com/lisacontoso";
+
+  const result = submitAgreement(request);
+
+  expect(result.publicData.info.gitHubOrganization).toEqual("contoso");
+  expect(result.publicData.info.contact1.gitHubID).toEqual("ellencontoso");
+  expect(result.publicData.info.contact2.gitHubID).toEqual("lisacontoso");
+});
+
+test("An entity with GitHub IDs as slash-suffixed URLs must get normalized", () => {
+  const request = goodEntityRequest();
+  request["entity-github-organization"] = "https://github.com/contoso/";
+  request["contact-1-github"] = "https://github.com/ellencontoso/";
+  request["contact-2-github"] = "https://github.com/lisacontoso/";
+
+  const result = submitAgreement(request);
+
+  expect(result.publicData.info.gitHubOrganization).toEqual("contoso");
+  expect(result.publicData.info.contact1.gitHubID).toEqual("ellencontoso");
+  expect(result.publicData.info.contact2.gitHubID).toEqual("lisacontoso");
+});
+
+test("An entity with GitHub IDs as protocol-less slash-less URLs must get normalized", () => {
+  const request = goodEntityRequest();
+  request["entity-github-organization"] = "github.com/contoso";
+  request["contact-1-github"] = "github.com/ellencontoso";
+  request["contact-2-github"] = "github.com/lisacontoso";
+
+  const result = submitAgreement(request);
+
+  expect(result.publicData.info.gitHubOrganization).toEqual("contoso");
+  expect(result.publicData.info.contact1.gitHubID).toEqual("ellencontoso");
+  expect(result.publicData.info.contact2.gitHubID).toEqual("lisacontoso");
+});
+
+test("An entity with otherwise-invalid GitHub IDs must throw BadRequest", () => {
+  for (const field of ["entity-github-organization", "contact-1-github", "contact-2-github"]) {
+    const request = goodEntityRequest();
+
+    request[field] = "cont oso";
+    expect(() => submitAgreement(request)).toThrow(BadRequest);
+
+    request[field] = "contoso-";
+    expect(() => submitAgreement(request)).toThrow(BadRequest);
+
+    request[field] = "contoso@";
+    expect(() => submitAgreement(request)).toThrow(BadRequest);
+
+    request[field] = "https://contoso";
+    expect(() => submitAgreement(request)).toThrow(BadRequest);
+  }
+});
+
 
 // Both
 
