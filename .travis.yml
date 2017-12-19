@@ -3,7 +3,7 @@ node_js: lts/*
 
 env:
   global:
-    - ENCRYPTION_LABEL="TODO"
+    - ENCRYPTION_LABEL="4190ff230232"
 
 script:
   - npm run lint
