@@ -1,3 +1,5 @@
+/coverage/
 /node_modules/
 /private-config.json
-/coverage/
+/deploy_key
+/known_hosts

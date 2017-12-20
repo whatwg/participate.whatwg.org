@@ -6,6 +6,7 @@ env:
     - ENCRYPTION_LABEL="4190ff230232"
 
 script:
+  - shellcheck deploy.sh
   - npm run lint
   - npm test
 

@@ -23,13 +23,26 @@ ssh-add deploy_key
 
 echo "$SERVER $SERVER_PUBLIC_KEY" > known_hosts
 
-rsync --rsh="ssh -o UserKnownHostsFile=known_hosts" --verbose
-      --include-from=.deployinclude --delete \
-      --archive --compress \
-      "." "$USERNAME@$SERVER:$WEB_ROOT"
+echo ""
+echo "Syncing files"
+rsync --rsh="ssh -o UserKnownHostsFile=known_hosts" \
+      --delete --verbose --archive --recursive --compress --files-from=.deployinclude \
+      . "$USERNAME@$SERVER:$WEB_ROOT"
 
-ssh -o UserKnownHostsFile=known_hosts "$SERVER" << EOF
+echo ""
+echo "Performing npm install"
+# We want to expand $WEB_ROOT and $PM2_NAME on the client side:
+# shellcheck disable=SC2087
+ssh -o UserKnownHostsFile=known_hosts $USERNAME@$SERVER /bin/bash << EOF
   cd $WEB_ROOT
-  npm install --production
+
+  # npm install --production is currently too buggy to use. Example:
+  # https://github.com/npm/npm/issues/18375. In general running npm install --production && npm ls
+  # should not produce errors, but with our setup, it does. We should change to using it if this
+  # ever gets better.
+  npm install
+
+  echo ""
+  echo "Doing a rolling-reload of the server"
   pm2 reload "$PM2_NAME"
 EOF
