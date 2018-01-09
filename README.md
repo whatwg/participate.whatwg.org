@@ -47,3 +47,5 @@ Follow the "[Creating Webhooks](https://developer.github.com/webhooks/creating/)
 - Content type: `application/json`
 - Secret: the value you've set in your `private-config.json`
 - Choose "Select individual events" and choose "Pull request" only
+
+Also ensure that the username specified in `private-config.json` is given write access to the repository, so it can push status updates.
