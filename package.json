@@ -1,7 +1,8 @@
 {
-  "name": "whatwg-workflow-prototype",
-  "version": "1.0.0-pre",
+  "name": "participate.whatwg.org",
+  "private": true,
   "description": "Prototype of the WHATWG contributor agreement and workstream signup workflow",
+  "repository": "whatwg/participate.whatwg.org",
   "author": "Domenic Denicola <d@domenic.me> (https://domenic.me/)",
   "license": "Apache-2.0",
   "scripts": {
