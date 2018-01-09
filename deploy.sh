@@ -36,11 +36,8 @@ echo "Performing npm install"
 ssh -o UserKnownHostsFile=known_hosts $USERNAME@$SERVER /bin/bash << EOF
   cd $WEB_ROOT
 
-  # npm install --production is currently too buggy to use. Example:
-  # https://github.com/npm/npm/issues/18375. In general running npm install --production && npm ls
-  # should not produce errors, but with our setup, it does. We should change to using it if this
-  # ever gets better.
-  npm install
+  npm install --production
+  npm prune --production
 
   echo ""
   echo "Doing a rolling-reload of the server"
