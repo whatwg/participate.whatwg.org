@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<meta charset="utf-8">
+<title>WHATWG {{title}}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#3A7908">
+<link rel="icon" href="https://resources.whatwg.org/logo.svg">
+<link rel="stylesheet" href="/style/shared.css">
+<link rel="stylesheet" href="/style/subpages.css">
+
+{{_sections.head}}
+
+<header>
+ <hgroup>
+  <h1>
+   <a href="/">
+    <img id="main-logo" src="https://resources.whatwg.org/logo.svg" alt="">
+    WHATWG
+   </a>
+  </h1>
+  <h2>{{title}}</h2>
+ </hgroup>
+</header>
+
+<nav class="buttonish-links">
+ <a href="https://spec.whatwg.org/">Standards</a>
+ <a href="https://whatwg.org/faq">FAQ</a>
+ <a href="https://whatwg.org/policies">Policies</a>
+ {{#if isIndex}}<a>Participate</a>
+ {{else}}<a href="/">Participate</a>{{/if}}
+</nav>
+
+{{{@body}}}
+
+<footer>
+ <p><small>Copyright © 2018 WHATWG (Apple, Google, Mozilla, Microsoft). This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</small></p>
+</footer>
