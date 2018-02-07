@@ -9,6 +9,13 @@ USERNAME="noderunner"
 WEB_ROOT="participate.whatwg.org"
 PM2_NAME="participate"
 
+TRAVIS_BRANCH=${TRAVIS_BRANCH:-}
+TRAVIS_PULL_REQUEST=${TRAVIS_PULL_REQUEST:-false}
+
+if [[ "$TRAVIS_BRANCH" != "master" || "$TRAVIS_PULL_REQUEST" != "false" ]]; then
+  exit 0
+fi
+
 # Get the deploy key by using Travis's stored variables to decrypt deploy_key.enc
 ENCRYPTED_KEY_VAR="encrypted_${ENCRYPTION_LABEL}_key"
 ENCRYPTED_IV_VAR="encrypted_${ENCRYPTION_LABEL}_iv"
