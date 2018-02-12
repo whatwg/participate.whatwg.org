@@ -334,8 +334,11 @@ input[type="submit"] {
 
  <script>
  "use strict";
- // Generic signature stuff
  (() => {
+  // Synchronize:
+  // - Only entity or individual <details> can be open at the same time
+  // - Only the open <details>'s form controls should be enabled
+  // - If the signature contains non-whitespace text, the date should get automatically filled out.
   const containers = {
    individual: document.querySelector('#individual-signature-container'),
    entity: document.querySelector('#entity-signature-container')
@@ -360,7 +363,7 @@ input[type="submit"] {
     if (signature.value.trim().length > 0) {
      // Does not work in Firefox:
      // date.valueAsDate = new Date();
-     date.value = (new Date()).toISOString().substring(0, "YYYY-MM-DD".length);
+     date.value = (new Date()).toISOString().substring(0, 'YYYY-MM-DD'.length);
     } else {
      date.value = '';
     }
@@ -370,6 +373,17 @@ input[type="submit"] {
    container.addEventListener('toggle', sync);
    sync();
   }
+
+  // Make backup contact email/GitHub ID required if and only if the name is set.
+  const contact2Name = document.querySelector('#contact-2-name');
+  const contact2Email = document.querySelector('#contact-2-email');
+  const contact2GitHub = document.querySelector('#contact-2-github');
+  function syncBackupContact() {
+   const hasName = contact2Name.value.length > 0;
+   contact2Email.required = contact2GitHub.required = hasName;
+  }
+  contact2Name.addEventListener('input', syncBackupContact);
+  syncBackupContact();
 
   function setInputsEnabledness(type, shouldBeEnabled) {
    const container = containers[type];
