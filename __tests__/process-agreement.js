@@ -56,6 +56,23 @@ test("An individual with an array of known scopes must transform appropriately",
   expect(submitAgreement(request)).toMatchSnapshot();
 });
 
+// The data format is different: see https://github.com/whatwg/html/pull/3606#issuecomment-378049017
+test("An individual selecting a single known workstream must transform appropriately", () => {
+  const request = goodIndividualRequest();
+  request.scope = "some";
+  request["scope-workstreams"] = "html";
+
+  expect(submitAgreement(request)).toMatchSnapshot();
+});
+
+test("An individual sending a single unknown workstream must throw BadRequest", () => {
+  const request = goodIndividualRequest();
+  request.scope = "some";
+  request["scope-workstreams"] = "asdf";
+
+  expect(() => submitAgreement(request)).toThrow(BadRequest);
+});
+
 const requiredIndividualKeys = Object.keys(goodIndividualRequest());
 for (const key of requiredIndividualKeys) {
   test(`Individual information missing ${key} must throw BadRequest`, () => {
