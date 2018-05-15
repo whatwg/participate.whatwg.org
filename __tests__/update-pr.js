@@ -62,6 +62,42 @@ test("A PR from a fork must trigger an appropriate status update", async () => {
   expect(mockCreateStatus.mock.calls[0]).toMatchSnapshot();
 });
 
+test("A PR with a hash at the end must still trigger an appropriate status update", async () => {
+  mockGet = jest.fn(() => fromFork);
+
+  await updatePR("https://github.com/whatwg/console/pull/131#issuecomment-376766631");
+
+  expect(mockGet).toHaveBeenCalledTimes(1);
+  expect(mockGet.mock.calls[0]).toEqual([{ owner: "whatwg", repo: "console", number: 131 }]);
+
+  expect(mockCreateStatus).toHaveBeenCalledTimes(1);
+  expect(mockCreateStatus.mock.calls[0]).toMatchSnapshot();
+});
+
+test("A PR with /files at the end must still trigger an appropriate status update", async () => {
+  mockGet = jest.fn(() => fromFork);
+
+  await updatePR("https://github.com/whatwg/console/pull/131/files");
+
+  expect(mockGet).toHaveBeenCalledTimes(1);
+  expect(mockGet.mock.calls[0]).toEqual([{ owner: "whatwg", repo: "console", number: 131 }]);
+
+  expect(mockCreateStatus).toHaveBeenCalledTimes(1);
+  expect(mockCreateStatus.mock.calls[0]).toMatchSnapshot();
+});
+
+test("A PR with /commits at the end must still trigger an appropriate status update", async () => {
+  mockGet = jest.fn(() => fromFork);
+
+  await updatePR("https://github.com/whatwg/console/pull/131/commits");
+
+  expect(mockGet).toHaveBeenCalledTimes(1);
+  expect(mockGet.mock.calls[0]).toEqual([{ owner: "whatwg", repo: "console", number: 131 }]);
+
+  expect(mockCreateStatus).toHaveBeenCalledTimes(1);
+  expect(mockCreateStatus.mock.calls[0]).toMatchSnapshot();
+});
+
 test("Bad URLs must reject", async () => {
   await expect(updatePR("https://github.com/not-whatwg/console/pull/7"))
     .rejects.toHaveProperty("name", "BadRequestError");

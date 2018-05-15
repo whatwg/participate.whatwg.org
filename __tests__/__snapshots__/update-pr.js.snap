@@ -23,3 +23,39 @@ Array [
   },
 ]
 `;
+
+exports[`A PR with /commits at the end must still trigger an appropriate status update 1`] = `
+Array [
+  Object {
+    "owner": "whatwg",
+    "repo": "console",
+    "sha": "d9dd6d011d09e3b423adc681d3a2fee6c4e1cce2",
+    "statusField1": "status value 1",
+    "statusField2": "status value 2",
+  },
+]
+`;
+
+exports[`A PR with /files at the end must still trigger an appropriate status update 1`] = `
+Array [
+  Object {
+    "owner": "whatwg",
+    "repo": "console",
+    "sha": "d9dd6d011d09e3b423adc681d3a2fee6c4e1cce2",
+    "statusField1": "status value 1",
+    "statusField2": "status value 2",
+  },
+]
+`;
+
+exports[`A PR with a hash at the end must still trigger an appropriate status update 1`] = `
+Array [
+  Object {
+    "owner": "whatwg",
+    "repo": "console",
+    "sha": "d9dd6d011d09e3b423adc681d3a2fee6c4e1cce2",
+    "statusField1": "status value 1",
+    "statusField2": "status value 2",
+  },
+]
+`;
