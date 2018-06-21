@@ -12,13 +12,13 @@
     "coverage": "jest --coverage"
   },
   "dependencies": {
-    "@octokit/rest": "^15.2.7",
+    "@octokit/rest": "^15.9.1",
     "github-username-regex": "^1.0.0",
     "handlebars": "^4.0.10",
     "http-errors": "^1.6.3",
     "http-graceful-shutdown": "^2.1.1",
     "koa": "^2.5.1",
-    "koa-bodyparser": "^4.2.0",
+    "koa-bodyparser": "^4.2.1",
     "koa-handlebars": "^2.0.0",
     "koa-router": "^7.4.0",
     "listify": "^1.0.0",
@@ -26,7 +26,7 @@
   },
   "devDependencies": {
     "eslint": "^4.19.1",
-    "jest": "^22.4.3",
-    "lolex": "^2.3.2"
+    "jest": "^23.1.0",
+    "lolex": "^2.7.0"
   }
 }
