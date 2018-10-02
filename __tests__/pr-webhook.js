@@ -1,6 +1,7 @@
 "use strict";
 const fromBranch = require("./__fixtures__/pr-from-branch-hook-payload.json");
 const fromFork = require("./__fixtures__/pr-from-fork-hook-payload.json");
+const fromMaster = require("./__fixtures__/pr-from-master-hook-payload.json");
 
 jest.mock("../lib/get-user-status.js", () => {
   return () => {
@@ -82,3 +83,10 @@ test("Non-404 errors getting the PR must be propagated", () => {
   expect(mockCreateStatus).toHaveBeenCalledTimes(0);
 });
 
+test("A PR to from master to a non-master branch must not trigger any status update", async () => {
+  mockPRGet.mockReturnValue(Promise.resolve());
+
+  await prWebhook(fromMaster);
+
+  expect(mockCreateStatus).toHaveBeenCalledTimes(0);
+});
