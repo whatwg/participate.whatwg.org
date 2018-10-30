@@ -88,6 +88,17 @@ Object {
 }
 `;
 
+exports[`Individuals exist, but the user is not one of them; it is an XSS attempt 1`] = `
+Object {
+  "context": "Participation",
+  "description": "@<script>alert(1);</script> has not signed up to participate",
+  "isNothing": true,
+  "longDescription": "@&lt;script&gt;alert(1);&lt;/script&gt; does not appear to have signed the agreement, or be associated with an entity that has done so. Please sign it, or forward it to an authorized representative!",
+  "state": "pending",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=<script>alert(1);</script>&repo=console",
+}
+`;
+
 exports[`Multiple entities, all not in this workstream 1`] = `
 Object {
   "context": "Participation",
