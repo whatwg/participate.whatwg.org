@@ -11,6 +11,17 @@ Object {
 }
 `;
 
+exports[`Individual exists, but their username is spelled with a different case 1`] = `
+Object {
+  "context": "Participation",
+  "description": "@JANEdoetw has signed up to participate as an individual",
+  "isNothing": false,
+  "longDescription": "@JANEdoetw has signed up to participate as an individual. All is well; contribute at will!",
+  "state": "success",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=JANEdoetw&repo=console",
+}
+`;
+
 exports[`Individual, participating in all workstreams, unverified 1`] = `
 Object {
   "context": "Participation",

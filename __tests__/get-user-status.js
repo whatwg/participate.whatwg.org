@@ -211,3 +211,10 @@ test("Individuals exist, but the user is not one of them; it is an XSS attempt",
   ]);
   expect(await getUserStatus("<script>alert(1);</script>", "console")).toMatchSnapshot();
 });
+
+
+test("Individual exists, but their username is spelled with a different case", async () => {
+  mockData.set("individual-public", [individualData(["console"], true, { id: "janeDOEtw" })]);
+
+  expect(await getUserStatus("JANEdoetw", "console")).toMatchSnapshot();
+});
