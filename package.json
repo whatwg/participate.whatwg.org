@@ -15,7 +15,7 @@
     "@octokit/rest": "^16.30.1",
     "escape-goat": "^2.1.1",
     "github-username-regex": "^1.0.0",
-    "handlebars": "^4.4.0",
+    "handlebars": "^4.5.1",
     "http-errors": "^1.7.3",
     "http-graceful-shutdown": "^2.3.2",
     "koa": "^2.8.2",
@@ -26,7 +26,7 @@
     "uuid": "^3.3.3"
   },
   "devDependencies": {
-    "eslint": "^6.3.0",
+    "eslint": "^6.6.0",
     "jest": "^24.9.0",
     "lolex": "^4.2.0"
   }
