@@ -18,7 +18,7 @@
     "handlebars": "^4.5.3",
     "http-errors": "^1.7.3",
     "http-graceful-shutdown": "^2.3.2",
-    "koa": "^2.8.2",
+    "koa": "^2.11.0",
     "koa-bodyparser": "^4.2.1",
     "koa-handlebars": "^2.0.0",
     "koa-router": "^7.4.0",
