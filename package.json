@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@octokit/rest": "^16.41.1",
-    "escape-goat": "^2.1.1",
+    "escape-goat": "^3.0.0",
     "github-username-regex": "^1.0.0",
     "handlebars": "^4.7.2",
     "http-errors": "^1.7.3",
@@ -21,7 +21,7 @@
     "koa": "^2.11.0",
     "koa-bodyparser": "^4.2.1",
     "koa-handlebars": "^2.0.0",
-    "koa-router": "^7.4.0",
+    "@koa/router": "^8.0.6",
     "listify": "^1.0.0",
     "uuid": "^3.4.0"
   },
