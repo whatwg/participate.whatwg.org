@@ -23,7 +23,7 @@
     "koa-handlebars": "^2.0.0",
     "@koa/router": "^8.0.8",
     "listify": "^1.0.0",
-    "uuid": "^3.4.0"
+    "uuid": "^7.0.2"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
