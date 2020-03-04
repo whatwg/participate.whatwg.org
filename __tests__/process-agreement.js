@@ -1,18 +1,22 @@
 "use strict";
 
 // Fake the UUID generator so it is deterministic for snapshot testing.
-jest.mock("uuid/v4", () => {
-  return () => "1d8ab899-4d91-48b8-acfa-bf9cde5ad909";
+jest.mock("uuid", () => {
+  return {
+    v4() {
+      return "1d8ab899-4d91-48b8-acfa-bf9cde5ad909";
+    }
+  };
 });
 
-const lolex = require("lolex");
+const fakeTimers = require("@sinonjs/fake-timers");
 const submitAgreement = require("../lib/process-agreement.js");
 const { BadRequest } = require("http-errors");
 
 // Fake the clock so that signature timestamps are deterministic for snapshot testing.
 let clock;
 beforeAll(() => {
-  clock = lolex.install({ toFake: ["Date"] });
+  clock = fakeTimers.install({ toFake: ["Date"] });
 });
 afterAll(() => {
   clock.uninstall();
