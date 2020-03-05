@@ -22,7 +22,7 @@ jest.mock("../lib/helpers/github.js", () => {
           return mockCreateStatus;
         }
       },
-      pullRequests: {
+      pulls: {
         get get() {
           return mockPRGet;
         }
