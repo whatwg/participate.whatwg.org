@@ -17,7 +17,7 @@ let mockGet;
 jest.mock("../lib/helpers/github.js", () => {
   return {
     api: {
-      pullRequests: {
+      pulls: {
         get get() {
           return mockGet;
         }
@@ -44,7 +44,7 @@ test("A PR from a branch must trigger an appropriate status update", async () =>
   await updatePR("https://github.com/whatwg/console/pull/5");
 
   expect(mockGet).toHaveBeenCalledTimes(1);
-  expect(mockGet.mock.calls[0]).toEqual([{ owner: "whatwg", repo: "console", number: 5 }]);
+  expect(mockGet.mock.calls[0]).toEqual([{ owner: "whatwg", repo: "console", pull_number: 5 }]);
 
   expect(mockCreateStatus).toHaveBeenCalledTimes(1);
   expect(mockCreateStatus.mock.calls[0]).toMatchSnapshot();
@@ -56,7 +56,7 @@ test("A PR from a fork must trigger an appropriate status update", async () => {
   await updatePR("https://github.com/whatwg/console/pull/6");
 
   expect(mockGet).toHaveBeenCalledTimes(1);
-  expect(mockGet.mock.calls[0]).toEqual([{ owner: "whatwg", repo: "console", number: 6 }]);
+  expect(mockGet.mock.calls[0]).toEqual([{ owner: "whatwg", repo: "console", pull_number: 6 }]);
 
   expect(mockCreateStatus).toHaveBeenCalledTimes(1);
   expect(mockCreateStatus.mock.calls[0]).toMatchSnapshot();
@@ -68,7 +68,7 @@ test("A PR with a hash at the end must still trigger an appropriate status updat
   await updatePR("https://github.com/whatwg/console/pull/131#issuecomment-376766631");
 
   expect(mockGet).toHaveBeenCalledTimes(1);
-  expect(mockGet.mock.calls[0]).toEqual([{ owner: "whatwg", repo: "console", number: 131 }]);
+  expect(mockGet.mock.calls[0]).toEqual([{ owner: "whatwg", repo: "console", pull_number: 131 }]);
 
   expect(mockCreateStatus).toHaveBeenCalledTimes(1);
   expect(mockCreateStatus.mock.calls[0]).toMatchSnapshot();
@@ -80,7 +80,7 @@ test("A PR with /files at the end must still trigger an appropriate status updat
   await updatePR("https://github.com/whatwg/console/pull/131/files");
 
   expect(mockGet).toHaveBeenCalledTimes(1);
-  expect(mockGet.mock.calls[0]).toEqual([{ owner: "whatwg", repo: "console", number: 131 }]);
+  expect(mockGet.mock.calls[0]).toEqual([{ owner: "whatwg", repo: "console", pull_number: 131 }]);
 
   expect(mockCreateStatus).toHaveBeenCalledTimes(1);
   expect(mockCreateStatus.mock.calls[0]).toMatchSnapshot();
@@ -92,7 +92,7 @@ test("A PR with /commits at the end must still trigger an appropriate status upd
   await updatePR("https://github.com/whatwg/console/pull/131/commits");
 
   expect(mockGet).toHaveBeenCalledTimes(1);
-  expect(mockGet.mock.calls[0]).toEqual([{ owner: "whatwg", repo: "console", number: 131 }]);
+  expect(mockGet.mock.calls[0]).toEqual([{ owner: "whatwg", repo: "console", pull_number: 131 }]);
 
   expect(mockCreateStatus).toHaveBeenCalledTimes(1);
   expect(mockCreateStatus.mock.calls[0]).toMatchSnapshot();
