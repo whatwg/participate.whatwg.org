@@ -60,7 +60,7 @@ Object {
   "context": "Participation",
   "description": "@johndoetw participates as an individual, but not in this workstream",
   "isNothing": false,
-  "longDescription": "@johndoetw has signed up to participate as an individual, but has not chosen to participate in the Console APIs workstream. To amend your agreement, submit a pull request to <a href=\\"https://github.com/whatwg/participant-data\\">whatwg/participant-data</a>.",
+  "longDescription": "@johndoetw has signed up to participate as an individual, but has not chosen to participate in the Console workstream. To amend your agreement, submit a pull request to <a href=\\"https://github.com/whatwg/participant-data\\">whatwg/participant-data</a>.",
   "state": "pending",
   "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console",
 }
@@ -115,7 +115,7 @@ Object {
   "context": "Participation",
   "description": "@johndoetw participates on behalf of a non-workstream entity",
   "isNothing": false,
-  "longDescription": "@johndoetw is part of the contoso1 and contoso2 GitHub organizations, but they all do not participate in the Console APIs workstream. Please have the contact for those organizations update their participation agreement.",
+  "longDescription": "@johndoetw is part of the contoso1 and contoso2 GitHub organizations, but they all do not participate in the Console workstream. Please have the contact for those organizations update their participation agreement.",
   "state": "pending",
   "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console",
 }
@@ -137,7 +137,7 @@ Object {
   "context": "Participation",
   "description": "johndoetw participates on behalf of Contoso 2",
   "isNothing": false,
-  "longDescription": "@johndoetw is part of the contoso2 GitHub organization, associated with Contoso 2, which has signed the agreement and participates in the Console APIs workstream. All is well; contribute at will!",
+  "longDescription": "@johndoetw is part of the contoso2 GitHub organization, associated with Contoso 2, which has signed the agreement and participates in the Console workstream. All is well; contribute at will!",
   "state": "success",
   "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console",
 }
@@ -148,7 +148,7 @@ Object {
   "context": "Participation",
   "description": "johndoetw participates on behalf of Contoso 2",
   "isNothing": false,
-  "longDescription": "@johndoetw is part of the contoso2 GitHub organization, associated with Contoso 2, which has signed the agreement and participates in the Console APIs workstream. All is well; contribute at will!",
+  "longDescription": "@johndoetw is part of the contoso2 GitHub organization, associated with Contoso 2, which has signed the agreement and participates in the Console workstream. All is well; contribute at will!",
   "state": "success",
   "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console",
 }
@@ -159,7 +159,7 @@ Object {
   "context": "Participation",
   "description": "johndoetw participates on behalf of Contoso 2",
   "isNothing": false,
-  "longDescription": "@johndoetw is part of the contoso2 GitHub organization, associated with Contoso 2, which has signed the agreement and participates in the Console APIs workstream. All is well; contribute at will!",
+  "longDescription": "@johndoetw is part of the contoso2 GitHub organization, associated with Contoso 2, which has signed the agreement and participates in the Console workstream. All is well; contribute at will!",
   "state": "success",
   "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console",
 }
@@ -170,7 +170,7 @@ Object {
   "context": "Participation",
   "description": "@johndoetw participates on behalf of a non-workstream entity",
   "isNothing": false,
-  "longDescription": "@johndoetw is part of the contoso2 GitHub organization, but it does not participate in the Console APIs workstream. Please have the contact for this organization update their participation agreement.",
+  "longDescription": "@johndoetw is part of the contoso2 GitHub organization, but it does not participate in the Console workstream. Please have the contact for this organization update their participation agreement.",
   "state": "pending",
   "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console",
 }
@@ -203,7 +203,7 @@ Object {
   "context": "Participation",
   "description": "johndoetw participates on behalf of Contoso Ltd.",
   "isNothing": false,
-  "longDescription": "@johndoetw is part of the contoso GitHub organization, associated with Contoso Ltd., which has signed the agreement and participates in the Console APIs workstream. All is well; contribute at will!",
+  "longDescription": "@johndoetw is part of the contoso GitHub organization, associated with Contoso Ltd., which has signed the agreement and participates in the Console workstream. All is well; contribute at will!",
   "state": "success",
   "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console",
 }
@@ -225,7 +225,7 @@ Object {
   "context": "Participation",
   "description": "@johndoetw participates on behalf of a non-workstream entity",
   "isNothing": false,
-  "longDescription": "@johndoetw is part of the contoso GitHub organization, but it does not participate in the Console APIs workstream. Please have the contact for this organization update their participation agreement.",
+  "longDescription": "@johndoetw is part of the contoso GitHub organization, but it does not participate in the Console workstream. Please have the contact for this organization update their participation agreement.",
   "state": "pending",
   "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console",
 }
@@ -247,7 +247,7 @@ Object {
   "context": "Participation",
   "description": "johndoetw participates on behalf of Contoso Ltd.",
   "isNothing": false,
-  "longDescription": "@johndoetw is part of the contoso GitHub organization, associated with Contoso Ltd., which has signed the agreement and participates in the Console APIs workstream. All is well; contribute at will!",
+  "longDescription": "@johndoetw is part of the contoso GitHub organization, associated with Contoso Ltd., which has signed the agreement and participates in the Console workstream. All is well; contribute at will!",
   "state": "success",
   "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console",
 }
