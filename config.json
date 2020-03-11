@@ -15,7 +15,7 @@
     },
     {
       "id": "console",
-      "name": "Console APIs"
+      "name": "Console"
     },
     {
       "id": "dom",
@@ -47,7 +47,7 @@
     },
     {
       "id": "notifications",
-      "name": "Notifications"
+      "name": "Notifications API"
     },
     {
       "id": "quirks",
@@ -55,11 +55,11 @@
     },
     {
       "id": "storage",
-      "name": "Storage API"
+      "name": "Storage"
     },
     {
       "id": "streams",
-      "name": "Streams APIs"
+      "name": "Streams"
     },
     {
       "id": "url",
@@ -67,7 +67,7 @@
     },
     {
       "id": "xhr",
-      "name": "XMLHttpRequest API"
+      "name": "XMLHttpRequest"
     }
   ]
 }
