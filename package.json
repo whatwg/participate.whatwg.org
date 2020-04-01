@@ -23,7 +23,7 @@
     "koa-bodyparser": "^4.3.0",
     "koa-handlebars": "^2.0.0",
     "listify": "^1.0.0",
-    "uuid": "^7.0.2"
+    "uuid": "^7.0.3"
   },
   "devDependencies": {
     "@sinonjs/fake-timers": "^6.0.1",
