@@ -31,6 +31,8 @@ To get set up:
 
 Start the server with `npm run start`. It will use the `PORT` environment variable if set, or 3000 as the default port otherwise.
 
+The above steps should automatically clone the [whatwg/sg](https://github.com/whatwg/sg) repository into the `sg/` subdirectory. If you need to update the repository at any time, run `npm run update-sg`.
+
 ### List of resources
 
 - `GET  /agreement`: the agreement form
