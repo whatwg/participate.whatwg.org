@@ -8,7 +8,9 @@
   "scripts": {
     "start": "node lib/app.js",
     "lint": "eslint .",
+    "postinstall": "npm run update-sg",
     "test": "jest",
+    "update-sg": "git clone \"https://github.com/whatwg/sg.git\" \"sg\" || git -C \"sg\" pull",
     "coverage": "jest --coverage"
   },
   "dependencies": {

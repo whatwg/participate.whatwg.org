@@ -4,3 +4,4 @@ views
 config.json
 package-lock.json
 package.json
+sg/db.json
