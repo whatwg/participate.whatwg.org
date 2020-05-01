@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@koa/router": "^8.0.8",
-    "@octokit/rest": "^17.1.4",
+    "@octokit/rest": "^17.6.0",
     "escape-goat": "^3.0.0",
     "github-username-regex": "^1.0.0",
     "handlebars": "^4.7.6",
