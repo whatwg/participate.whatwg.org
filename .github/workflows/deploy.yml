@@ -1,0 +1,35 @@
+name: Test & Deploy
+on:
+  pull_request:
+    branches:
+    - master
+  push:
+    branches:
+    - master
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
+      with:
+        node-version: 14
+    - run: shellcheck deploy.sh
+    - run: npm install
+    - run: npm run lint
+    - run: npm test
+      env:
+        FORCE_COLOR: 3
+  deploy:
+    name: Deploy
+    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
+    needs: test
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v2
+    - run: bash ./deploy.sh
+      env:
+        SERVER: ${{ secrets.PARTICIPATE_SERVER }}
+        SERVER_PUBLIC_KEY: ${{ secrets.PARTICIPATE_PUBLIC_KEY }}
+        SERVER_DEPLOY_KEY: ${{ secrets.PARTICIPATE_DEPLOY_KEY }}
