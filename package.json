@@ -19,7 +19,7 @@
     "escape-goat": "^3.0.0",
     "github-username-regex": "^1.0.0",
     "handlebars": "^4.7.6",
-    "http-errors": "^1.7.3",
+    "http-errors": "^1.8.0",
     "http-graceful-shutdown": "^2.3.2",
     "koa": "^2.13.0",
     "koa-bodyparser": "^4.3.0",
