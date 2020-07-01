@@ -14,7 +14,7 @@
     "coverage": "jest --coverage"
   },
   "dependencies": {
-    "@koa/router": "^9.0.1",
+    "@koa/router": "^9.1.0",
     "@octokit/rest": "^17.9.2",
     "escape-goat": "^3.0.0",
     "github-username-regex": "^1.0.0",
