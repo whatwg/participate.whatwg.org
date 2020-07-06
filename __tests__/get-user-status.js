@@ -18,7 +18,7 @@ jest.mock("../lib/helpers/github.js", () => {
   return {
     api: {
       orgs: {
-        checkPublicMembership({ org, username }) {
+        checkPublicMembershipForUser({ org, username }) {
           if (mockOrgMemberships.get(username).includes(org)) {
             return Promise.resolve();
           }
