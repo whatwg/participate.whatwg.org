@@ -16,7 +16,7 @@ if [[ "$TRAVIS_BRANCH" != "master" || "$TRAVIS_PULL_REQUEST" != "false" ]]; then
   exit 0
 fi
 
-# Grab the sg/ repo
+# Grab the sg/ repo, as `npm install --production` will not run the prepare script.
 npm run update-sg
 
 # Get the deploy key by using Travis's stored variables to decrypt deploy_key.enc
