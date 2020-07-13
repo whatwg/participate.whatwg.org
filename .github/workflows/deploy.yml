@@ -30,6 +30,6 @@ jobs:
     - uses: actions/checkout@v2
     - run: bash ./deploy.sh
       env:
-        SERVER: ${{ secrets.PARTICIPATE_SERVER }}
-        SERVER_PUBLIC_KEY: ${{ secrets.PARTICIPATE_PUBLIC_KEY }}
-        SERVER_DEPLOY_KEY: ${{ secrets.PARTICIPATE_DEPLOY_KEY }}
+        SERVER: ${{ secrets.NOEMBED_SERVER }}
+        SERVER_PUBLIC_KEY: ${{ secrets.NOEMBED_PUBLIC_KEY }}
+        SERVER_DEPLOY_KEY: ${{ secrets.NOEMBED_DEPLOY_KEY }}
