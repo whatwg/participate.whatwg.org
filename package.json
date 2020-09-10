@@ -31,6 +31,6 @@
     "@sinonjs/fake-timers": "^6.0.1",
     "eslint": "^7.8.0",
     "jest": "^26.4.2",
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^2.6.1"
   }
 }
