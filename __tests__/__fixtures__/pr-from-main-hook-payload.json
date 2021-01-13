@@ -59,8 +59,8 @@
     "comments_url": "https://api.github.com/repos/whatwg/html/issues/4053/comments",
     "statuses_url": "https://api.github.com/repos/whatwg/html/statuses/6fbb7ff8fbe1c76506145ba8ffce690224be66e0",
     "head": {
-      "label": "whatwg:master",
-      "ref": "master",
+      "label": "whatwg:main",
+      "ref": "main",
       "sha": "6fbb7ff8fbe1c76506145ba8ffce690224be66e0",
       "user": {
         "login": "whatwg",
@@ -179,7 +179,7 @@
         "forks": 711,
         "open_issues": 950,
         "watchers": 2073,
-        "default_branch": "master"
+        "default_branch": "main"
       }
     },
     "base": {
@@ -303,7 +303,7 @@
         "forks": 711,
         "open_issues": 950,
         "watchers": 2073,
-        "default_branch": "master"
+        "default_branch": "main"
       }
     },
     "_links": {
@@ -443,7 +443,7 @@
     "forks": 711,
     "open_issues": 950,
     "watchers": 2073,
-    "default_branch": "master"
+    "default_branch": "main"
   },
   "organization": {
     "login": "whatwg",
