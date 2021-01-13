@@ -154,12 +154,12 @@
         "forks": 0,
         "open_issues": 0,
         "watchers": 0,
-        "default_branch": "master"
+        "default_branch": "main"
       }
     },
     "base": {
-      "label": "whatwg:master",
-      "ref": "master",
+      "label": "whatwg:main",
+      "ref": "main",
       "sha": "e1e46ec6a0de4e8c787150f22be9811415b25637",
       "user": {
         "login": "whatwg",
@@ -267,7 +267,7 @@
         "forks": 2,
         "open_issues": 0,
         "watchers": 0,
-        "default_branch": "master"
+        "default_branch": "main"
       }
     },
     "_links": {

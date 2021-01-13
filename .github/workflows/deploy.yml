@@ -2,10 +2,10 @@ name: Test & Deploy
 on:
   pull_request:
     branches:
-    - master
+    - main
   push:
     branches:
-    - master
+    - main
 jobs:
   test:
     name: Test
@@ -23,7 +23,7 @@ jobs:
         FORCE_COLOR: 3
   deploy:
     name: Deploy
-    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
+    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
     needs: test
     runs-on: ubuntu-20.04
     steps:
