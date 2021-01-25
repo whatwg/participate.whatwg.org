@@ -14,5 +14,15 @@
   },
   "webhook": {
     "secret": ""
+  },
+  "twitterBot": {
+    "key": "",
+    "secret": ""
+  },
+  "twitterAccounts": {
+    "notifyapi": {
+      "key": "",
+      "secret": ""
+    }
   }
 }
