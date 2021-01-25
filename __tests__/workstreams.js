@@ -48,5 +48,5 @@ test("workstreamFromRepo, for a two-standard workstream", () => {
 });
 
 test("workstreamFromRepo, for an invalid repo", () => {
-  expect(workstreams.workstreamFromRepo("not-a-standard")).toEqual(undefined);
+  expect(workstreams.workstreamFromRepo("not-a-standard")).toEqual(null);
 });
