@@ -17,7 +17,7 @@ const mockCommits = [
     input: {
       message: "Meta: rename branch",
       url: "https://example.com/1",
-      author: { "email": "a@example.com", "username": "a" }
+      author: { email: "a@example.com", username: "a" }
     },
     expected: null
   },
@@ -26,7 +26,7 @@ const mockCommits = [
     input: {
       message: "Review Draft Publication: that time of the year",
       url: "https://example.com/1",
-      author: { "email": "a@example.com", "username": "a" }
+      author: { email: "a@example.com", username: "a" }
     },
     expected: null
   },
@@ -35,7 +35,7 @@ const mockCommits = [
     input: {
       message: "Fix example",
       url: "https://example.com/2",
-      author: { "email": "b@example.com", "username": "b" }
+      author: { email: "b@example.com", username: "b" }
     },
     expected: "Fix example\nhttps://example.com/2"
   },
@@ -44,7 +44,7 @@ const mockCommits = [
     input: {
       message: "Fix example",
       url: "https://example.com/3",
-      author: { "email": "c@example.com", "username": "c" }
+      author: { email: "c@example.com", username: "c" }
     },
     expected: "Fix example (thanks c!)\nhttps://example.com/3"
   }
