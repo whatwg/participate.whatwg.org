@@ -214,13 +214,13 @@ input[type="submit"] {
  <script>
  "use strict";
  (() => {
-  const someScope = document.querySelector('input[name="scope"][value="some"]');
   const allScope = document.querySelector('input[name="scope"][value="all"]');
+  const someScope = document.querySelector('input[name="scope"][value="some"]');
+  const invitedScope = document.querySelector('input[name="scope"][value="invited"]');
   const workstreamFields = Array.from(document.querySelectorAll('#workstream-selection input'));
-  const followingWorkstreamsAddendum = document.querySelector('#following-workstreams-addendum');
 
   function syncState() {
-   const disabled = allScope.checked;
+   const disabled = !someScope.checked;
    for (const field of workstreamFields) {
     field.disabled = disabled;
     field.parentElement.classList.toggle('disabled-control', disabled);
@@ -229,12 +229,12 @@ input[type="submit"] {
      field.checked = true;
     }
    }
-   followingWorkstreamsAddendum.classList.toggle('disabled-control', disabled);
   }
 
   syncState();
-  someScope.addEventListener('change', syncState);
   allScope.addEventListener('change', syncState);
+  someScope.addEventListener('change', syncState);
+  invitedScope.addEventListener('change', syncState);
  })();
  </script>
 
