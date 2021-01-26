@@ -15,7 +15,7 @@
   "webhook": {
     "secret": ""
   },
-  "twitterBot": {
+  "twitterApp": {
     "key": "",
     "secret": ""
   },

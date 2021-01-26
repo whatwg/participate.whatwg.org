@@ -52,3 +52,7 @@ Follow the "[Creating Webhooks](https://developer.github.com/webhooks/creating/)
 - Choose "Select individual events" and choose "Pull request" only
 
 Also ensure that the username specified in `private-config.json` is given write access to the repository, so it can push status updates.
+
+### Twitter integration
+
+`twitterApp` in `private-config.json` needs to have the consumer API key and consumer API secret key of the Twitter app in its `key` and `secret` members respectively. `twitterAccounts` contains the Twitter accounts and their keys associated with the app. See the [whatwg/whattweetbot-keys](https://github.com/whatwg/whattweetbot-keys) repository for more details.

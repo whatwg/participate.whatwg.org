@@ -50,3 +50,15 @@ test("workstreamFromRepo, for a two-standard workstream", () => {
 test("workstreamFromRepo, for an invalid repo", () => {
   expect(workstreams.workstreamFromRepo("not-a-standard")).toEqual(null);
 });
+
+test("standardFromRepo, for a single standard workstream", () => {
+  expect(workstreams.standardFromRepo("standard1").href).toEqual("https://standard1.spec.whatwg.org/");
+});
+
+test("standardFromRepo, for a double standard workstream", () => {
+  expect(workstreams.standardFromRepo("standard3").href).toEqual("https://standard3.spec.whatwg.org/");
+});
+
+test("standardFromRepo, for an invalid repo", () => {
+  expect(workstreams.standardFromRepo("not-a-standard")).toEqual(null);
+});
