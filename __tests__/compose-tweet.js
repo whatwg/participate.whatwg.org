@@ -47,6 +47,15 @@ const mockCommits = [
       author: { email: "c@example.com", username: "c" }
     },
     expected: "Fix example (thanks c!)\nhttps://example.com/3"
+  },
+  {
+    name: "Commit message contains newlines",
+    input: {
+      message: "Fix example\n\nCloses #342",
+      url: "https://example.com/4",
+      author: { email: "a@example.com", username: "a" }
+    },
+    expected: "Fix example\nhttps://example.com/4"
   }
 ];
 
