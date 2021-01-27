@@ -37,10 +37,10 @@ The above steps should automatically clone the [whatwg/sg](https://github.com/wh
 
 - `GET  /agreement`: the agreement form
 - `POST /submit-agreement`: where the `/agreement` form is submitted to
-- `POST /push-status-check`: an endpoint hit by the GitHub commit status webhook
 - `GET  /agreement-status?user=...&repo=...`: the status page linked to from the GitHub status check
 - `POST /update-pr`: an endpoint hit by `/agreement-status` to sync pull requests
-- `POST /github-webhook`: an endpoint hit by the GitHub commit status webhook for push and pull_request events
+- `POST /push-status-check`: an endpoint hit by the GitHub commit status webhook for pull_request events
+- `POST /webhooks/twitter`: an endpoint hit by the GitHub commit status webhook for push events
 
 ### Setting up the GitHub webhook
 
