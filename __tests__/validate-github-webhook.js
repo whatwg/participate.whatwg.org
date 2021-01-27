@@ -1,7 +1,6 @@
 "use strict";
 
 jest.mock("../private-config.json", () => {
-  // eslint-disable-next-line global-require
   return { webhook: { secret: "hunter2" } };
 }, { virtual: true });
 
