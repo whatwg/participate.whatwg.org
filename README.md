@@ -37,9 +37,10 @@ The above steps should automatically clone the [whatwg/sg](https://github.com/wh
 
 - `GET  /agreement`: the agreement form
 - `POST /submit-agreement`: where the `/agreement` form is submitted to
-- `POST /push-status-check`: an endpoint hit by the GitHub commit status webhook
 - `GET  /agreement-status?user=...&repo=...`: the status page linked to from the GitHub status check
 - `POST /update-pr`: an endpoint hit by `/agreement-status` to sync pull requests
+- `POST /push-status-check`: an endpoint hit by the GitHub commit status webhook for pull_request events
+- `POST /webhooks/twitter`: an endpoint hit by the GitHub commit status webhook for push events
 
 ### Setting up the GitHub webhook
 
@@ -51,3 +52,7 @@ Follow the "[Creating Webhooks](https://developer.github.com/webhooks/creating/)
 - Choose "Select individual events" and choose "Pull request" only
 
 Also ensure that the username specified in `private-config.json` is given write access to the repository, so it can push status updates.
+
+### Twitter integration
+
+`twitterApp` in `private-config.json` needs to have the consumer API key and consumer API secret key of the Twitter app in its `key` and `secret` members respectively. `twitterAccounts` contains the Twitter accounts and their keys associated with the app. See the [whatwg/whattweetbot-keys](https://github.com/whatwg/whattweetbot-keys) repository for more details.
