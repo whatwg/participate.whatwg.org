@@ -43,3 +43,11 @@ test("A push to main must trigger a tweet", async () => {
     }
   );
 });
+
+// Tests to write (easier once we collect some events to paste into __fixtures__):
+// - Pushes to a non-main branch
+// - Push to a main branch but in a non-standard repo
+// - A standard repo with no keys configured should throw an error
+// - Multiple commits in a single event?
+// - Cases where composeTweet returns null?
+//   Should we do that by mocking composeTweet, or by adding redundant coverage?
