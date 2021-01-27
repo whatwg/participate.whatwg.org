@@ -1,0 +1,209 @@
+{
+  "ref": "refs/heads/main",
+  "before": "816bbfb7b96d3a4f9b5bf8e55465d235d9765510",
+  "after": "c80cbf52b351609b3a107bb2d047d6377ffafbf9",
+  "repository": {
+    "id": 5581406,
+    "node_id": "MDEwOlJlcG9zaXRvcnk1NTgxNDA2",
+    "name": "dom",
+    "full_name": "whatwg/dom",
+    "private": false,
+    "owner": {
+      "name": "whatwg",
+      "email": null,
+      "login": "whatwg",
+      "id": 2226336,
+      "node_id": "MDEyOk9yZ2FuaXphdGlvbjIyMjYzMzY=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2226336?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/whatwg",
+      "html_url": "https://github.com/whatwg",
+      "followers_url": "https://api.github.com/users/whatwg/followers",
+      "following_url": "https://api.github.com/users/whatwg/following{/other_user}",
+      "gists_url": "https://api.github.com/users/whatwg/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/whatwg/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/whatwg/subscriptions",
+      "organizations_url": "https://api.github.com/users/whatwg/orgs",
+      "repos_url": "https://api.github.com/users/whatwg/repos",
+      "events_url": "https://api.github.com/users/whatwg/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/whatwg/received_events",
+      "type": "Organization",
+      "site_admin": false
+    },
+    "html_url": "https://github.com/whatwg/dom",
+    "description": "DOM Standard",
+    "fork": false,
+    "url": "https://github.com/whatwg/dom",
+    "forks_url": "https://api.github.com/repos/whatwg/dom/forks",
+    "keys_url": "https://api.github.com/repos/whatwg/dom/keys{/key_id}",
+    "collaborators_url": "https://api.github.com/repos/whatwg/dom/collaborators{/collaborator}",
+    "teams_url": "https://api.github.com/repos/whatwg/dom/teams",
+    "hooks_url": "https://api.github.com/repos/whatwg/dom/hooks",
+    "issue_events_url": "https://api.github.com/repos/whatwg/dom/issues/events{/number}",
+    "events_url": "https://api.github.com/repos/whatwg/dom/events",
+    "assignees_url": "https://api.github.com/repos/whatwg/dom/assignees{/user}",
+    "branches_url": "https://api.github.com/repos/whatwg/dom/branches{/branch}",
+    "tags_url": "https://api.github.com/repos/whatwg/dom/tags",
+    "blobs_url": "https://api.github.com/repos/whatwg/dom/git/blobs{/sha}",
+    "git_tags_url": "https://api.github.com/repos/whatwg/dom/git/tags{/sha}",
+    "git_refs_url": "https://api.github.com/repos/whatwg/dom/git/refs{/sha}",
+    "trees_url": "https://api.github.com/repos/whatwg/dom/git/trees{/sha}",
+    "statuses_url": "https://api.github.com/repos/whatwg/dom/statuses/{sha}",
+    "languages_url": "https://api.github.com/repos/whatwg/dom/languages",
+    "stargazers_url": "https://api.github.com/repos/whatwg/dom/stargazers",
+    "contributors_url": "https://api.github.com/repos/whatwg/dom/contributors",
+    "subscribers_url": "https://api.github.com/repos/whatwg/dom/subscribers",
+    "subscription_url": "https://api.github.com/repos/whatwg/dom/subscription",
+    "commits_url": "https://api.github.com/repos/whatwg/dom/commits{/sha}",
+    "git_commits_url": "https://api.github.com/repos/whatwg/dom/git/commits{/sha}",
+    "comments_url": "https://api.github.com/repos/whatwg/dom/comments{/number}",
+    "issue_comment_url": "https://api.github.com/repos/whatwg/dom/issues/comments{/number}",
+    "contents_url": "https://api.github.com/repos/whatwg/dom/contents/{+path}",
+    "compare_url": "https://api.github.com/repos/whatwg/dom/compare/{base}...{head}",
+    "merges_url": "https://api.github.com/repos/whatwg/dom/merges",
+    "archive_url": "https://api.github.com/repos/whatwg/dom/{archive_format}{/ref}",
+    "downloads_url": "https://api.github.com/repos/whatwg/dom/downloads",
+    "issues_url": "https://api.github.com/repos/whatwg/dom/issues{/number}",
+    "pulls_url": "https://api.github.com/repos/whatwg/dom/pulls{/number}",
+    "milestones_url": "https://api.github.com/repos/whatwg/dom/milestones{/number}",
+    "notifications_url": "https://api.github.com/repos/whatwg/dom/notifications{?since,all,participating}",
+    "labels_url": "https://api.github.com/repos/whatwg/dom/labels{/name}",
+    "releases_url": "https://api.github.com/repos/whatwg/dom/releases{/id}",
+    "deployments_url": "https://api.github.com/repos/whatwg/dom/deployments",
+    "created_at": 1346133546,
+    "updated_at": "2021-01-27T09:09:16Z",
+    "pushed_at": 1611768106,
+    "git_url": "git://github.com/whatwg/dom.git",
+    "ssh_url": "git@github.com:whatwg/dom.git",
+    "clone_url": "https://github.com/whatwg/dom.git",
+    "svn_url": "https://github.com/whatwg/dom",
+    "homepage": "https://dom.spec.whatwg.org/",
+    "size": 44998,
+    "stargazers_count": 1087,
+    "watchers_count": 1087,
+    "language": "HTML",
+    "has_issues": true,
+    "has_projects": false,
+    "has_downloads": true,
+    "has_wiki": true,
+    "has_pages": false,
+    "forks_count": 220,
+    "mirror_url": null,
+    "archived": false,
+    "disabled": false,
+    "open_issues_count": 145,
+    "license": {
+      "key": "cc-by-4.0",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://api.github.com/licenses/cc-by-4.0",
+      "node_id": "MDc6TGljZW5zZTI1"
+    },
+    "forks": 220,
+    "open_issues": 145,
+    "watchers": 1087,
+    "default_branch": "main",
+    "stargazers": 1087,
+    "master_branch": "main",
+    "organization": "whatwg"
+  },
+  "pusher": {
+    "name": "annevk",
+    "email": "annevk@annevk.nl"
+  },
+  "organization": {
+    "login": "whatwg",
+    "id": 2226336,
+    "node_id": "MDEyOk9yZ2FuaXphdGlvbjIyMjYzMzY=",
+    "url": "https://api.github.com/orgs/whatwg",
+    "repos_url": "https://api.github.com/orgs/whatwg/repos",
+    "events_url": "https://api.github.com/orgs/whatwg/events",
+    "hooks_url": "https://api.github.com/orgs/whatwg/hooks",
+    "issues_url": "https://api.github.com/orgs/whatwg/issues",
+    "members_url": "https://api.github.com/orgs/whatwg/members{/member}",
+    "public_members_url": "https://api.github.com/orgs/whatwg/public_members{/member}",
+    "avatar_url": "https://avatars.githubusercontent.com/u/2226336?v=4",
+    "description": "Please leave your sense of logic at the door. All are welcome to participate."
+  },
+  "sender": {
+    "login": "annevk",
+    "id": 1544111,
+    "node_id": "MDQ6VXNlcjE1NDQxMTE=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/1544111?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/annevk",
+    "html_url": "https://github.com/annevk",
+    "followers_url": "https://api.github.com/users/annevk/followers",
+    "following_url": "https://api.github.com/users/annevk/following{/other_user}",
+    "gists_url": "https://api.github.com/users/annevk/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/annevk/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/annevk/subscriptions",
+    "organizations_url": "https://api.github.com/users/annevk/orgs",
+    "repos_url": "https://api.github.com/users/annevk/repos",
+    "events_url": "https://api.github.com/users/annevk/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/annevk/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "created": false,
+  "deleted": false,
+  "forced": false,
+  "base_ref": null,
+  "compare": "https://github.com/whatwg/dom/compare/816bbfb7b96d...c80cbf52b351",
+  "commits": [
+    {
+      "id": "c80cbf52b351609b3a107bb2d047d6377ffafbf9",
+      "tree_id": "c69e171386f8ee5de9bdae79a24ef12c033c27db",
+      "distinct": true,
+      "message": "Use a single exception for name validation (follow-up)\n\nOnce you have thrown for all QName cases, you can no longer throw for Name cases. Tested as part of #423.\r\n\r\nAlso cleanup createElementNS()'s domintro.\r\n\r\nFixes #671 and closes #675.",
+      "timestamp": "2021-01-27T18:21:44+01:00",
+      "url": "https://github.com/whatwg/dom/commit/c80cbf52b351609b3a107bb2d047d6377ffafbf9",
+      "author": {
+        "name": "Anne van Kesteren",
+        "email": "annevk@annevk.nl",
+        "username": "annevk"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "username": "web-flow"
+      },
+      "added": [
+
+      ],
+      "removed": [
+
+      ],
+      "modified": [
+        "dom.bs"
+      ]
+    }
+  ],
+  "head_commit": {
+    "id": "c80cbf52b351609b3a107bb2d047d6377ffafbf9",
+    "tree_id": "c69e171386f8ee5de9bdae79a24ef12c033c27db",
+    "distinct": true,
+    "message": "Use a single exception for name validation (follow-up)\n\nOnce you have thrown for all QName cases, you can no longer throw for Name cases. Tested as part of #423.\r\n\r\nAlso cleanup createElementNS()'s domintro.\r\n\r\nFixes #671 and closes #675.",
+    "timestamp": "2021-01-27T18:21:44+01:00",
+    "url": "https://github.com/whatwg/dom/commit/c80cbf52b351609b3a107bb2d047d6377ffafbf9",
+    "author": {
+      "name": "Anne van Kesteren",
+      "email": "annevk@annevk.nl",
+      "username": "annevk"
+    },
+    "committer": {
+      "name": "GitHub",
+      "email": "noreply@github.com",
+      "username": "web-flow"
+    },
+    "added": [
+
+    ],
+    "removed": [
+
+    ],
+    "modified": [
+      "dom.bs"
+    ]
+  }
+}
