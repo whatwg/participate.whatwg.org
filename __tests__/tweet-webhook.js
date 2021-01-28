@@ -1,5 +1,7 @@
 "use strict";
 const pushToMain = require("./__fixtures__/push-to-main.json");
+const pushToMainMeta = require("./__fixtures__/push-to-main-meta.json");
+const pushToBranch = require("./__fixtures__/push-to-branch.json");
 
 jest.mock("twitter-lite");
 const Twitter = require("twitter-lite");
@@ -14,6 +16,14 @@ jest.mock("../private-config.json", () => {
       thedomstandard: {
         key: "domstandardkey",
         secret: "domstandardsecret"
+      },
+      htmlstandard: {
+        key: "htmlstandardkey",
+        secret: "htmlstandardsecret"
+      },
+      fetchstandard: {
+        key: "fetchstandardkey",
+        secret: "fetchstandardsecret"
       }
     }
   };
@@ -25,7 +35,7 @@ beforeEach(() => {
   Twitter.mockClear();
 });
 
-test("A push to main must trigger a tweet", async () => {
+test("A push to main with a substantive commit must trigger a tweet", async () => {
   await tweetWebhook(pushToMain);
 
   expect(Twitter).toHaveBeenCalledTimes(1);
@@ -44,10 +54,19 @@ test("A push to main must trigger a tweet", async () => {
   );
 });
 
+test("A push to main with a Meta: commit must not trigger a tweet", async () => {
+  await tweetWebhook(pushToMainMeta);
+
+  expect(Twitter).not.toHaveBeenCalled();
+});
+
+test("A push to a non-main branch must not trigger a tweet", async () => {
+  await tweetWebhook(pushToBranch);
+
+  expect(Twitter).not.toHaveBeenCalled();
+});
+
 // Tests to write (easier once we collect some events to paste into __fixtures__):
-// - Pushes to a non-main branch
 // - Push to a main branch but in a non-standard repo
 // - A standard repo with no keys configured should throw an error
 // - Multiple commits in a single event?
-// - Cases where composeTweet returns null?
-//   Should we do that by mocking composeTweet, or by adding redundant coverage?
