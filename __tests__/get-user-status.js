@@ -210,13 +210,13 @@ for (const pull of [undefined, "120"]) {
       individualData(["console"], true, { id: "janedoetw" }),
       individualData(["console"], true, { id: "bobbosstw" })
     ]);
-    expect(await getUserStatus("<script>alert(1);</script>", "console")).toMatchSnapshot();
+    expect(await getUserStatus("<script>alert(1);</script>", "console", pull)).toMatchSnapshot();
   });
 
 
   test("Individual exists, but their username is spelled with a different case", async () => {
     mockData.set("individual-public", [individualData(["console"], true, { id: "janeDOEtw" })]);
 
-    expect(await getUserStatus("JANEdoetw", "console")).toMatchSnapshot();
+    expect(await getUserStatus("JANEdoetw", "console", pull)).toMatchSnapshot();
   });
 }

@@ -40,7 +40,7 @@ Object {
   "isNothing": false,
   "longDescription": "@JANEdoetw has signed up to participate as an individual. All is well; contribute at will!",
   "state": "success",
-  "target_url": "https://participate.whatwg.org/agreement-status?user=JANEdoetw&repo=console",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=JANEdoetw&repo=console&pull=120",
 }
 `;
 
@@ -216,7 +216,7 @@ Object {
   "isNothing": true,
   "longDescription": "@&lt;script&gt;alert(1);&lt;/script&gt; does not appear to have signed the agreement, or be associated with an entity that has done so. Please sign it, or forward it to an authorized representative!",
   "state": "pending",
-  "target_url": "https://participate.whatwg.org/agreement-status?user=<script>alert(1);</script>&repo=console",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=<script>alert(1);</script>&repo=console&pull=120",
 }
 `;
 
