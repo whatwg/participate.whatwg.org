@@ -59,162 +59,164 @@ beforeEach(() => {
   mockOrgMemberships = new Map();
 });
 
-test("No data", async () => {
-  expect(await getUserStatus("johndoetw", "console")).toMatchSnapshot();
-});
+for (const pull of [undefined, "120"]) {
+  test("No data", async () => {
+    expect(await getUserStatus("johndoetw", "console", pull)).toMatchSnapshot();
+  });
 
 
-test("Individual, participating in that particular workstream, verified", async () => {
-  mockData.set("individual-public", [individualData(["console"], true)]);
-  expect(await getUserStatus("johndoetw", "console")).toMatchSnapshot();
-});
+  test("Individual, participating in that particular workstream, verified", async () => {
+    mockData.set("individual-public", [individualData(["console"], true)]);
+    expect(await getUserStatus("johndoetw", "console", pull)).toMatchSnapshot();
+  });
 
-test("Individual, participating in that particular workstream, unverified", async () => {
-  mockData.set("individual-public", [individualData(["console"], false)]);
-  expect(await getUserStatus("johndoetw", "console")).toMatchSnapshot();
-});
+  test("Individual, participating in that particular workstream, unverified", async () => {
+    mockData.set("individual-public", [individualData(["console"], false)]);
+    expect(await getUserStatus("johndoetw", "console", pull)).toMatchSnapshot();
+  });
 
-test("Individual, participating in all workstreams, verified", async () => {
-  mockData.set("individual-public", [individualData("all", true)]);
-  expect(await getUserStatus("johndoetw", "console")).toMatchSnapshot();
-});
+  test("Individual, participating in all workstreams, verified", async () => {
+    mockData.set("individual-public", [individualData("all", true)]);
+    expect(await getUserStatus("johndoetw", "console", pull)).toMatchSnapshot();
+  });
 
-test("Individual, participating in all workstreams, unverified", async () => {
-  mockData.set("individual-public", [individualData("all", false)]);
-  expect(await getUserStatus("johndoetw", "console")).toMatchSnapshot();
-});
+  test("Individual, participating in all workstreams, unverified", async () => {
+    mockData.set("individual-public", [individualData("all", false)]);
+    expect(await getUserStatus("johndoetw", "console", pull)).toMatchSnapshot();
+  });
 
-test("Individual, participating in other workstreams but not that one, verified", async () => {
-  mockData.set("individual-public", [individualData(["xhr"], true)]);
-  expect(await getUserStatus("johndoetw", "console")).toMatchSnapshot();
-});
+  test("Individual, participating in other workstreams but not that one, verified", async () => {
+    mockData.set("individual-public", [individualData(["xhr"], true)]);
+    expect(await getUserStatus("johndoetw", "console", pull)).toMatchSnapshot();
+  });
 
-test("Individual, participating in other workstreams but not that one, unverified", async () => {
-  mockData.set("individual-public", [individualData(["xhr"], false)]);
-  expect(await getUserStatus("johndoetw", "console")).toMatchSnapshot();
-});
-
-
-test("Via entity, participating in that particular workstream, verified", async () => {
-  mockOrgMemberships.set("johndoetw", ["contoso"]);
-  mockData.set("entity", [entityData(["console"], true)]);
-  expect(await getUserStatus("johndoetw", "console")).toMatchSnapshot();
-});
-
-test("Via entity, participating in that particular workstream, unverified", async () => {
-  mockOrgMemberships.set("johndoetw", ["contoso"]);
-  mockData.set("entity", [entityData(["console"], false)]);
-  expect(await getUserStatus("johndoetw", "console")).toMatchSnapshot();
-});
-
-test("Via entity, participating in all workstreams, verified", async () => {
-  mockOrgMemberships.set("johndoetw", ["contoso"]);
-  mockData.set("entity", [entityData("all", true)]);
-  expect(await getUserStatus("johndoetw", "console")).toMatchSnapshot();
-});
-
-test("Via entity, participating in all workstreams, unverified", async () => {
-  mockOrgMemberships.set("johndoetw", ["contoso"]);
-  mockData.set("entity", [entityData("all", false)]);
-  expect(await getUserStatus("johndoetw", "console")).toMatchSnapshot();
-});
-
-test("Via entity, participating in other workstreams but not that one, verified", async () => {
-  mockOrgMemberships.set("johndoetw", ["contoso"]);
-  mockData.set("entity", [entityData(["xhr"], true)]);
-  expect(await getUserStatus("johndoetw", "console")).toMatchSnapshot();
-});
-
-test("Via entity, participating in other workstreams but not that one, unverified", async () => {
-  mockOrgMemberships.set("johndoetw", ["contoso"]);
-  mockData.set("entity", [entityData(["xhr"], false)]);
-  expect(await getUserStatus("johndoetw", "console")).toMatchSnapshot();
-});
+  test("Individual, participating in other workstreams but not that one, unverified", async () => {
+    mockData.set("individual-public", [individualData(["xhr"], false)]);
+    expect(await getUserStatus("johndoetw", "console", pull)).toMatchSnapshot();
+  });
 
 
-test("Multiple entities, one participating and one not", async () => {
-  mockOrgMemberships.set("johndoetw", ["contoso1", "contoso2"]);
-  mockData.set("entity", [
-    entityData(["xhr"], true, { name: "Contoso 1", org: "contoso1" }),
-    entityData(["console"], true, { name: "Contoso 2", org: "contoso2" })
-  ]);
-  expect(await getUserStatus("johndoetw", "console")).toMatchSnapshot();
-});
+  test("Via entity, participating in that particular workstream, verified", async () => {
+    mockOrgMemberships.set("johndoetw", ["contoso"]);
+    mockData.set("entity", [entityData(["console"], true)]);
+    expect(await getUserStatus("johndoetw", "console", pull)).toMatchSnapshot();
+  });
 
-test("Multiple entities, one verified and one not", async () => {
-  mockOrgMemberships.set("johndoetw", ["contoso1", "contoso2"]);
-  mockData.set("entity", [
-    entityData(["console"], false, { name: "Contoso 1", org: "contoso1" }),
-    entityData(["console"], true, { name: "Contoso 2", org: "contoso2" })
-  ]);
-  expect(await getUserStatus("johndoetw", "console")).toMatchSnapshot();
-});
+  test("Via entity, participating in that particular workstream, unverified", async () => {
+    mockOrgMemberships.set("johndoetw", ["contoso"]);
+    mockData.set("entity", [entityData(["console"], false)]);
+    expect(await getUserStatus("johndoetw", "console", pull)).toMatchSnapshot();
+  });
 
-test("Multiple entities, participating one unverified", async () => {
-  mockOrgMemberships.set("johndoetw", ["contoso1", "contoso2"]);
-  mockData.set("entity", [
-    entityData(["console"], false, { name: "Contoso 1", org: "contoso1" }),
-    entityData(["xhr"], true, { name: "Contoso 2", org: "contoso2" })
-  ]);
-  expect(await getUserStatus("johndoetw", "console")).toMatchSnapshot();
-});
+  test("Via entity, participating in all workstreams, verified", async () => {
+    mockOrgMemberships.set("johndoetw", ["contoso"]);
+    mockData.set("entity", [entityData("all", true)]);
+    expect(await getUserStatus("johndoetw", "console", pull)).toMatchSnapshot();
+  });
 
-test("Multiple entities, one good option", async () => {
-  mockOrgMemberships.set("johndoetw", ["contoso1", "contoso2"]);
-  mockData.set("entity", [
-    entityData(["xhr"], false, { name: "Contoso 1", org: "contoso1" }),
-    entityData(["console"], true, { name: "Contoso 2", org: "contoso2" })
-  ]);
-  expect(await getUserStatus("johndoetw", "console")).toMatchSnapshot();
-});
+  test("Via entity, participating in all workstreams, unverified", async () => {
+    mockOrgMemberships.set("johndoetw", ["contoso"]);
+    mockData.set("entity", [entityData("all", false)]);
+    expect(await getUserStatus("johndoetw", "console", pull)).toMatchSnapshot();
+  });
 
-test("Multiple entities, all unverified", async () => {
-  mockOrgMemberships.set("johndoetw", ["contoso1", "contoso2"]);
-  mockData.set("entity", [
-    entityData(["console"], false, { name: "Contoso 1", org: "contoso1" }),
-    entityData(["console"], false, { name: "Contoso 2", org: "contoso2" })
-  ]);
-  expect(await getUserStatus("johndoetw", "console")).toMatchSnapshot();
-});
+  test("Via entity, participating in other workstreams but not that one, verified", async () => {
+    mockOrgMemberships.set("johndoetw", ["contoso"]);
+    mockData.set("entity", [entityData(["xhr"], true)]);
+    expect(await getUserStatus("johndoetw", "console", pull)).toMatchSnapshot();
+  });
 
-test("Multiple entities, all not in this workstream", async () => {
-  mockOrgMemberships.set("johndoetw", ["contoso1", "contoso2"]);
-  mockData.set("entity", [
-    entityData(["xhr"], true, { name: "Contoso 1", org: "contoso1" }),
-    entityData(["xhr"], true, { name: "Contoso 2", org: "contoso2" })
-  ]);
-  expect(await getUserStatus("johndoetw", "console")).toMatchSnapshot();
-});
+  test("Via entity, participating in other workstreams but not that one, unverified", async () => {
+    mockOrgMemberships.set("johndoetw", ["contoso"]);
+    mockData.set("entity", [entityData(["xhr"], false)]);
+    expect(await getUserStatus("johndoetw", "console", pull)).toMatchSnapshot();
+  });
 
 
-test("Entities exist, but the user is not in them", async () => {
-  mockOrgMemberships.set("johndoetw", []);
-  mockData.set("entity", [
-    entityData(["console"], true, { name: "Contoso 1", org: "contoso1" }),
-    entityData(["console"], true, { name: "Contoso 2", org: "contoso2" })
-  ]);
-  expect(await getUserStatus("johndoetw", "console")).toMatchSnapshot();
-});
+  test("Multiple entities, one participating and one not", async () => {
+    mockOrgMemberships.set("johndoetw", ["contoso1", "contoso2"]);
+    mockData.set("entity", [
+      entityData(["xhr"], true, { name: "Contoso 1", org: "contoso1" }),
+      entityData(["console"], true, { name: "Contoso 2", org: "contoso2" })
+    ]);
+    expect(await getUserStatus("johndoetw", "console", pull)).toMatchSnapshot();
+  });
 
-test("Individuals exist, but the user is not one of them", async () => {
-  mockData.set("individual-public", [
-    individualData(["console"], true, { id: "janedoetw" }),
-    individualData(["console"], true, { id: "bobbosstw" })
-  ]);
-  expect(await getUserStatus("johndoetw", "console")).toMatchSnapshot();
-});
+  test("Multiple entities, one verified and one not", async () => {
+    mockOrgMemberships.set("johndoetw", ["contoso1", "contoso2"]);
+    mockData.set("entity", [
+      entityData(["console"], false, { name: "Contoso 1", org: "contoso1" }),
+      entityData(["console"], true, { name: "Contoso 2", org: "contoso2" })
+    ]);
+    expect(await getUserStatus("johndoetw", "console", pull)).toMatchSnapshot();
+  });
 
-test("Individuals exist, but the user is not one of them; it is an XSS attempt", async () => {
-  mockData.set("individual-public", [
-    individualData(["console"], true, { id: "janedoetw" }),
-    individualData(["console"], true, { id: "bobbosstw" })
-  ]);
-  expect(await getUserStatus("<script>alert(1);</script>", "console")).toMatchSnapshot();
-});
+  test("Multiple entities, participating one unverified", async () => {
+    mockOrgMemberships.set("johndoetw", ["contoso1", "contoso2"]);
+    mockData.set("entity", [
+      entityData(["console"], false, { name: "Contoso 1", org: "contoso1" }),
+      entityData(["xhr"], true, { name: "Contoso 2", org: "contoso2" })
+    ]);
+    expect(await getUserStatus("johndoetw", "console", pull)).toMatchSnapshot();
+  });
+
+  test("Multiple entities, one good option", async () => {
+    mockOrgMemberships.set("johndoetw", ["contoso1", "contoso2"]);
+    mockData.set("entity", [
+      entityData(["xhr"], false, { name: "Contoso 1", org: "contoso1" }),
+      entityData(["console"], true, { name: "Contoso 2", org: "contoso2" })
+    ]);
+    expect(await getUserStatus("johndoetw", "console", pull)).toMatchSnapshot();
+  });
+
+  test("Multiple entities, all unverified", async () => {
+    mockOrgMemberships.set("johndoetw", ["contoso1", "contoso2"]);
+    mockData.set("entity", [
+      entityData(["console"], false, { name: "Contoso 1", org: "contoso1" }),
+      entityData(["console"], false, { name: "Contoso 2", org: "contoso2" })
+    ]);
+    expect(await getUserStatus("johndoetw", "console", pull)).toMatchSnapshot();
+  });
+
+  test("Multiple entities, all not in this workstream", async () => {
+    mockOrgMemberships.set("johndoetw", ["contoso1", "contoso2"]);
+    mockData.set("entity", [
+      entityData(["xhr"], true, { name: "Contoso 1", org: "contoso1" }),
+      entityData(["xhr"], true, { name: "Contoso 2", org: "contoso2" })
+    ]);
+    expect(await getUserStatus("johndoetw", "console", pull)).toMatchSnapshot();
+  });
 
 
-test("Individual exists, but their username is spelled with a different case", async () => {
-  mockData.set("individual-public", [individualData(["console"], true, { id: "janeDOEtw" })]);
+  test("Entities exist, but the user is not in them", async () => {
+    mockOrgMemberships.set("johndoetw", []);
+    mockData.set("entity", [
+      entityData(["console"], true, { name: "Contoso 1", org: "contoso1" }),
+      entityData(["console"], true, { name: "Contoso 2", org: "contoso2" })
+    ]);
+    expect(await getUserStatus("johndoetw", "console", pull)).toMatchSnapshot();
+  });
 
-  expect(await getUserStatus("JANEdoetw", "console")).toMatchSnapshot();
-});
+  test("Individuals exist, but the user is not one of them", async () => {
+    mockData.set("individual-public", [
+      individualData(["console"], true, { id: "janedoetw" }),
+      individualData(["console"], true, { id: "bobbosstw" })
+    ]);
+    expect(await getUserStatus("johndoetw", "console", pull)).toMatchSnapshot();
+  });
+
+  test("Individuals exist, but the user is not one of them; it is an XSS attempt", async () => {
+    mockData.set("individual-public", [
+      individualData(["console"], true, { id: "janedoetw" }),
+      individualData(["console"], true, { id: "bobbosstw" })
+    ]);
+    expect(await getUserStatus("<script>alert(1);</script>", "console", pull)).toMatchSnapshot();
+  });
+
+
+  test("Individual exists, but their username is spelled with a different case", async () => {
+    mockData.set("individual-public", [individualData(["console"], true, { id: "janeDOEtw" })]);
+
+    expect(await getUserStatus("JANEdoetw", "console", pull)).toMatchSnapshot();
+  });
+}
