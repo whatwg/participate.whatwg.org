@@ -59,7 +59,7 @@ beforeEach(() => {
   mockOrgMemberships = new Map();
 });
 
-[undefined, "120"].forEach(pull => {
+for (const pull of [undefined, "120"]) {
   test("No data", async () => {
     expect(await getUserStatus("johndoetw", "console", pull)).toMatchSnapshot();
   });
@@ -219,4 +219,4 @@ beforeEach(() => {
 
     expect(await getUserStatus("JANEdoetw", "console")).toMatchSnapshot();
   });
-});
+}
