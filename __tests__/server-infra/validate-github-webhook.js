@@ -1,10 +1,10 @@
 "use strict";
 
-jest.mock("../private-config.json", () => {
+jest.mock("../../private-config.json", () => {
   return { webhook: { secret: "hunter2" } };
 }, { virtual: true });
 
-const validateGitHubWebhook = require("../lib/server-infra/validate-github-webhook.js");
+const validateGitHubWebhook = require("../../lib/server-infra/validate-github-webhook.js");
 
 [
   {

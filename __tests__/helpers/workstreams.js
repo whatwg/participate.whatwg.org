@@ -1,6 +1,6 @@
 "use strict";
 
-jest.mock("../sg/db.json", () => {
+jest.mock("../../sg/db.json", () => {
   return {
     workstreams: [
       {
@@ -28,7 +28,7 @@ jest.mock("../sg/db.json", () => {
   };
 }, { virtual: true });
 
-const workstreams = require("../lib/helpers/workstreams.js");
+const workstreams = require("../../lib/helpers/workstreams.js");
 
 test("repos", () => {
   expect(workstreams.repos).toEqual(["standard1", "standard2", "standard3"]);
