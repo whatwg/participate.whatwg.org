@@ -6,7 +6,6 @@
 !config.json
 !package-lock.json
 !package.json
-!sg/db.json
 
 # TODO
 !private-config.sample.json
