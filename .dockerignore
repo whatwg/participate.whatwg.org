@@ -6,6 +6,3 @@
 !config.json
 !package-lock.json
 !package.json
-
-# TODO
-!private-config.sample.json
