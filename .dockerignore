@@ -1,0 +1,12 @@
+## Ignore everything and list only what should be included.
+**
+!layouts
+!lib
+!views
+!config.json
+!package-lock.json
+!package.json
+!sg/db.json
+
+# TODO
+!private-config.sample.json
