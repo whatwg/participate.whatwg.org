@@ -1,0 +1,23 @@
+# https://www.digitalocean.com/docs/app-platform/references/app-specification-reference/
+domains:
+- domain: staging.participate.whatwg.org
+  type: PRIMARY
+  zone: whatwg.org
+name: participate
+region: nyc
+services:
+- envs:
+  - key: PRIVATE_CONFIG_JSON
+    scope: RUN_TIME
+    type: SECRET
+    value: __PRIVATE_CONFIG_JSON__
+  http_port: 3000
+  image:
+    registry_type: DOCR
+    repository: participate
+    tag: latest
+  instance_count: 1
+  instance_size_slug: basic-xxs
+  name: participate
+  routes:
+  - path: /
