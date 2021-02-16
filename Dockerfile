@@ -1,4 +1,4 @@
-FROM node:14-buster-slim
+FROM node:14.15.5-buster-slim
 
 WORKDIR /app
 
@@ -8,6 +8,8 @@ RUN npm install --production
 
 ADD https://github.com/whatwg/sg/raw/main/db.json sg/db.json
 
-EXPOSE 3000
+ENV PORT=8080
+
+EXPOSE $PORT
 
 CMD [ "npm", "start" ]
