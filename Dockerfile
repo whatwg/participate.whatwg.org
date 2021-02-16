@@ -8,7 +8,7 @@ RUN npm install --production
 
 ADD https://github.com/whatwg/sg/raw/main/db.json sg/db.json
 
-ENV PORT=8080
+ENV PORT=3000
 
 EXPOSE $PORT
 
