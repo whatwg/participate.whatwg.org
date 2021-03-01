@@ -18,7 +18,7 @@
     "@octokit/rest": "^18.3.0",
     "escape-goat": "^3.0.0",
     "github-username-regex": "^1.0.0",
-    "handlebars": "^4.7.6",
+    "handlebars": "^4.7.7",
     "http-errors": "^1.8.0",
     "http-graceful-shutdown": "^3.0.1",
     "koa": "^2.13.1",
