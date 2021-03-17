@@ -18,7 +18,19 @@ afterAll(() => {
 test("responds to requests to the homepage", async () => {
   const url = `http://127.0.0.1:${server.address().port}/`;
 
-  const body = await (await fetch(url)).text();
+  const res = await fetch(url);
+  expect(res.status).toEqual(200);
 
+  const body = await res.text();
   expect(body).toContain("participate in the WHATWG");
+});
+
+test("/agreement-status throws appropriate error for incorrect pull parameter", async () => {
+  const url = `http://127.0.0.1:${server.address().port}/agreement-status?user=test&repo=test&pull=<script>alert(1)</script>`;
+
+  const res = await fetch(url);
+  expect(res.status).toEqual(400);
+
+  const body = await res.text();
+  expect(body).toContain("The pull parameter can only contain digits (0-9).");
 });

@@ -1,0 +1,205 @@
+{
+  "ref": "refs/heads/yhirano/streaming-upload-sw",
+  "before": "1ebeb029023ce27c48544026ddec165697f27079",
+  "after": "847abbc5bf48ab6032bb437bbb9386cfb29b0f39",
+  "repository": {
+    "id": 5777189,
+    "node_id": "MDEwOlJlcG9zaXRvcnk1Nzc3MTg5",
+    "name": "fetch",
+    "full_name": "whatwg/fetch",
+    "private": false,
+    "owner": {
+      "name": "whatwg",
+      "email": null,
+      "login": "whatwg",
+      "id": 2226336,
+      "node_id": "MDEyOk9yZ2FuaXphdGlvbjIyMjYzMzY=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2226336?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/whatwg",
+      "html_url": "https://github.com/whatwg",
+      "followers_url": "https://api.github.com/users/whatwg/followers",
+      "following_url": "https://api.github.com/users/whatwg/following{/other_user}",
+      "gists_url": "https://api.github.com/users/whatwg/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/whatwg/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/whatwg/subscriptions",
+      "organizations_url": "https://api.github.com/users/whatwg/orgs",
+      "repos_url": "https://api.github.com/users/whatwg/repos",
+      "events_url": "https://api.github.com/users/whatwg/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/whatwg/received_events",
+      "type": "Organization",
+      "site_admin": false
+    },
+    "html_url": "https://github.com/whatwg/fetch",
+    "description": "Fetch Standard",
+    "fork": false,
+    "url": "https://github.com/whatwg/fetch",
+    "forks_url": "https://api.github.com/repos/whatwg/fetch/forks",
+    "keys_url": "https://api.github.com/repos/whatwg/fetch/keys{/key_id}",
+    "collaborators_url": "https://api.github.com/repos/whatwg/fetch/collaborators{/collaborator}",
+    "teams_url": "https://api.github.com/repos/whatwg/fetch/teams",
+    "hooks_url": "https://api.github.com/repos/whatwg/fetch/hooks",
+    "issue_events_url": "https://api.github.com/repos/whatwg/fetch/issues/events{/number}",
+    "events_url": "https://api.github.com/repos/whatwg/fetch/events",
+    "assignees_url": "https://api.github.com/repos/whatwg/fetch/assignees{/user}",
+    "branches_url": "https://api.github.com/repos/whatwg/fetch/branches{/branch}",
+    "tags_url": "https://api.github.com/repos/whatwg/fetch/tags",
+    "blobs_url": "https://api.github.com/repos/whatwg/fetch/git/blobs{/sha}",
+    "git_tags_url": "https://api.github.com/repos/whatwg/fetch/git/tags{/sha}",
+    "git_refs_url": "https://api.github.com/repos/whatwg/fetch/git/refs{/sha}",
+    "trees_url": "https://api.github.com/repos/whatwg/fetch/git/trees{/sha}",
+    "statuses_url": "https://api.github.com/repos/whatwg/fetch/statuses/{sha}",
+    "languages_url": "https://api.github.com/repos/whatwg/fetch/languages",
+    "stargazers_url": "https://api.github.com/repos/whatwg/fetch/stargazers",
+    "contributors_url": "https://api.github.com/repos/whatwg/fetch/contributors",
+    "subscribers_url": "https://api.github.com/repos/whatwg/fetch/subscribers",
+    "subscription_url": "https://api.github.com/repos/whatwg/fetch/subscription",
+    "commits_url": "https://api.github.com/repos/whatwg/fetch/commits{/sha}",
+    "git_commits_url": "https://api.github.com/repos/whatwg/fetch/git/commits{/sha}",
+    "comments_url": "https://api.github.com/repos/whatwg/fetch/comments{/number}",
+    "issue_comment_url": "https://api.github.com/repos/whatwg/fetch/issues/comments{/number}",
+    "contents_url": "https://api.github.com/repos/whatwg/fetch/contents/{+path}",
+    "compare_url": "https://api.github.com/repos/whatwg/fetch/compare/{base}...{head}",
+    "merges_url": "https://api.github.com/repos/whatwg/fetch/merges",
+    "archive_url": "https://api.github.com/repos/whatwg/fetch/{archive_format}{/ref}",
+    "downloads_url": "https://api.github.com/repos/whatwg/fetch/downloads",
+    "issues_url": "https://api.github.com/repos/whatwg/fetch/issues{/number}",
+    "pulls_url": "https://api.github.com/repos/whatwg/fetch/pulls{/number}",
+    "milestones_url": "https://api.github.com/repos/whatwg/fetch/milestones{/number}",
+    "notifications_url": "https://api.github.com/repos/whatwg/fetch/notifications{?since,all,participating}",
+    "labels_url": "https://api.github.com/repos/whatwg/fetch/labels{/name}",
+    "releases_url": "https://api.github.com/repos/whatwg/fetch/releases{/id}",
+    "deployments_url": "https://api.github.com/repos/whatwg/fetch/deployments",
+    "created_at": 1347439160,
+    "updated_at": "2021-01-27T09:09:18Z",
+    "pushed_at": 1611835266,
+    "git_url": "git://github.com/whatwg/fetch.git",
+    "ssh_url": "git@github.com:whatwg/fetch.git",
+    "clone_url": "https://github.com/whatwg/fetch.git",
+    "svn_url": "https://github.com/whatwg/fetch",
+    "homepage": "https://fetch.spec.whatwg.org/",
+    "size": 7576,
+    "stargazers_count": 1651,
+    "watchers_count": 1651,
+    "language": "HTML",
+    "has_issues": true,
+    "has_projects": false,
+    "has_downloads": true,
+    "has_wiki": false,
+    "has_pages": false,
+    "forks_count": 232,
+    "mirror_url": null,
+    "archived": false,
+    "disabled": false,
+    "open_issues_count": 224,
+    "license": {
+      "key": "cc-by-4.0",
+      "name": "Creative Commons Attribution 4.0 International",
+      "spdx_id": "CC-BY-4.0",
+      "url": "https://api.github.com/licenses/cc-by-4.0",
+      "node_id": "MDc6TGljZW5zZTI1"
+    },
+    "forks": 232,
+    "open_issues": 224,
+    "watchers": 1651,
+    "default_branch": "main",
+    "stargazers": 1651,
+    "master_branch": "main",
+    "organization": "whatwg"
+  },
+  "pusher": {
+    "name": "yutakahirano",
+    "email": "yhirano@google.com"
+  },
+  "organization": {
+    "login": "whatwg",
+    "id": 2226336,
+    "node_id": "MDEyOk9yZ2FuaXphdGlvbjIyMjYzMzY=",
+    "url": "https://api.github.com/orgs/whatwg",
+    "repos_url": "https://api.github.com/orgs/whatwg/repos",
+    "events_url": "https://api.github.com/orgs/whatwg/events",
+    "hooks_url": "https://api.github.com/orgs/whatwg/hooks",
+    "issues_url": "https://api.github.com/orgs/whatwg/issues",
+    "members_url": "https://api.github.com/orgs/whatwg/members{/member}",
+    "public_members_url": "https://api.github.com/orgs/whatwg/public_members{/member}",
+    "avatar_url": "https://avatars.githubusercontent.com/u/2226336?v=4",
+    "description": "Please leave your sense of logic at the door. All are welcome to participate."
+  },
+  "sender": {
+    "login": "yutakahirano",
+    "id": 5187874,
+    "node_id": "MDQ6VXNlcjUxODc4NzQ=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/5187874?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/yutakahirano",
+    "html_url": "https://github.com/yutakahirano",
+    "followers_url": "https://api.github.com/users/yutakahirano/followers",
+    "following_url": "https://api.github.com/users/yutakahirano/following{/other_user}",
+    "gists_url": "https://api.github.com/users/yutakahirano/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/yutakahirano/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/yutakahirano/subscriptions",
+    "organizations_url": "https://api.github.com/users/yutakahirano/orgs",
+    "repos_url": "https://api.github.com/users/yutakahirano/repos",
+    "events_url": "https://api.github.com/users/yutakahirano/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/yutakahirano/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "created": false,
+  "deleted": false,
+  "forced": false,
+  "base_ref": null,
+  "compare": "https://github.com/whatwg/fetch/compare/1ebeb029023c...847abbc5bf48",
+  "commits": [
+    {
+      "id": "847abbc5bf48ab6032bb437bbb9386cfb29b0f39",
+      "tree_id": "9a03650bc468499faeeb3808a97abea99cc4a145",
+      "distinct": true,
+      "message": "fix",
+      "timestamp": "2021-01-28T21:00:42+09:00",
+      "url": "https://github.com/whatwg/fetch/commit/847abbc5bf48ab6032bb437bbb9386cfb29b0f39",
+      "author": {
+        "name": "Yutaka Hirano",
+        "email": "yhirano@chrmomium.org"
+      },
+      "committer": {
+        "name": "Yutaka Hirano",
+        "email": "yhirano@chrmomium.org"
+      },
+      "added": [
+
+      ],
+      "removed": [
+
+      ],
+      "modified": [
+        "fetch.bs"
+      ]
+    }
+  ],
+  "head_commit": {
+    "id": "847abbc5bf48ab6032bb437bbb9386cfb29b0f39",
+    "tree_id": "9a03650bc468499faeeb3808a97abea99cc4a145",
+    "distinct": true,
+    "message": "fix",
+    "timestamp": "2021-01-28T21:00:42+09:00",
+    "url": "https://github.com/whatwg/fetch/commit/847abbc5bf48ab6032bb437bbb9386cfb29b0f39",
+    "author": {
+      "name": "Yutaka Hirano",
+      "email": "yhirano@chrmomium.org"
+    },
+    "committer": {
+      "name": "Yutaka Hirano",
+      "email": "yhirano@chrmomium.org"
+    },
+    "added": [
+
+    ],
+    "removed": [
+
+    ],
+    "modified": [
+      "fetch.bs"
+    ]
+  }
+}
