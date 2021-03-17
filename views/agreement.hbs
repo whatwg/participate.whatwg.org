@@ -74,7 +74,8 @@ input[readonly] {
  margin-left: 60px;
 }
 
-#scope-selection > label {
+#scope-selection > label,
+#individual-signature-selection > label {
  display: block;
  margin: 1.1em 0;
 }
@@ -249,12 +250,12 @@ input[type="submit"] {
 
    <div id="individual-signature-selection">
     <label>
-     <input type="radio" name="individual_type" value="self" checked>
+     <input type="radio" name="individual-type" value="self" required>
      I represent that I do not <a href="https://whatwg.org/ipr-policy#2101-work-in-the-field-of-web-technologies">work in the field of web technologies</a> as an employee, contractor, or agent of another person or legal entity, and make this <a href="#agreement">Agreement</a> in my personal capacity only.
     </label>
 
     <label>
-     <input type="radio" name="individual_type" value="invited">
+     <input type="radio" name="individual-type" value="invited" required>
      I have been invited by the <a href="https://whatwg.org/sg-agreement#steering-group">Steering Group</a> and I agree that I am entering into this <a href="#agreement">Agreement</a> in my personal capacity only.
     </label>
    </div>
