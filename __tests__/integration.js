@@ -35,7 +35,7 @@ test("/agreement-status throws appropriate error for incorrect pull parameter", 
   expect(body).toContain("The pull parameter can only contain digits (0-9).");
 });
 
-test("/version", async () => {
+test("/version uses VERSION environment variable", async () => {
   process.env.VERSION = "1234567890abcdef";
   const url = `http://127.0.0.1:${server.address().port}/version`;
 
@@ -44,4 +44,12 @@ test("/version", async () => {
 
   const body = await res.text();
   expect(body).toEqual("1234567890abcdef");
+});
+
+test("/version is 404 if VERSION is not set", async () => {
+  delete process.env.VERSION;
+  const url = `http://127.0.0.1:${server.address().port}/version`;
+
+  const res = await fetch(url);
+  expect(res.status).toEqual(404);
 });
