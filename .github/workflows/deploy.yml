@@ -15,29 +15,17 @@ jobs:
     - uses: actions/setup-node@v1
       with:
         node-version: 14
-    - run: shellcheck deploy.sh
     - run: npm install
     - run: npm run lint
     - run: npm test
       env:
         FORCE_COLOR: 3
-  deploy:
-    name: Deploy
-    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
-    needs: test
-    runs-on: ubuntu-20.04
-    steps:
-    - uses: actions/checkout@v2
-    - run: echo $GITHUB_SHA > version.txt
-    - run: bash ./deploy.sh
-      env:
-        SERVER: ${{ secrets.NOEMBED_SERVER }}
-        SERVER_PUBLIC_KEY: ${{ secrets.NOEMBED_PUBLIC_KEY }}
-        SERVER_DEPLOY_KEY: ${{ secrets.NOEMBED_DEPLOY_KEY }}
+  # The deploy happens on DigitalOcean, this just checks that it eventually
+  # succeeds.
   verify-deploy:
     name: Verify Deploy
     if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
-    needs: deploy
+    needs: test
     runs-on: ubuntu-20.04
     steps:
     - run: |
