@@ -34,3 +34,14 @@ test("/agreement-status throws appropriate error for incorrect pull parameter", 
   const body = await res.text();
   expect(body).toContain("The pull parameter can only contain digits (0-9).");
 });
+
+test("/version", async () => {
+  process.env.VERSION = "1234567890abcdef";
+  const url = `http://127.0.0.1:${server.address().port}/version`;
+
+  const res = await fetch(url);
+  expect(res.status).toEqual(200);
+
+  const body = await res.text();
+  expect(body).toEqual("1234567890abcdef");
+});
