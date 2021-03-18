@@ -418,7 +418,7 @@ input[type="submit"] {
     }
 
     for (const typeForInputs of types) {
-     let enableExceptions = Array.from(containers[typeForInputs].querySelectorAll('input[data-enable-exception]') || []);
+     let enableExceptions = Array.from(containers[typeForInputs].querySelectorAll('input[data-enable-exception]'));
      setInputsEnabledness(typeForInputs, containers[typeForInputs].hasAttribute('open'), enableExceptions);
     }
 
