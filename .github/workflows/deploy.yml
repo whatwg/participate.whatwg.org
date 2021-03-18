@@ -28,8 +28,28 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
     - uses: actions/checkout@v2
+    - run: echo $GITHUB_SHA > version.txt
     - run: bash ./deploy.sh
       env:
         SERVER: ${{ secrets.NOEMBED_SERVER }}
         SERVER_PUBLIC_KEY: ${{ secrets.NOEMBED_PUBLIC_KEY }}
         SERVER_DEPLOY_KEY: ${{ secrets.NOEMBED_DEPLOY_KEY }}
+  verify-deploy:
+    name: Verify Deploy
+    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+    needs: deploy
+    runs-on: ubuntu-20.04
+    steps:
+    - run: |
+        for i in {1..10}; do
+          DEPLOYED_VERSION="$(curl -s https://participate.whatwg.org/version)"
+          if [[ "$DEPLOYED_VERSION" = "$GITHUB_SHA" ]]; then
+            echo "$GITHUB_SHA deploy verified!"
+            exit 0
+          fi
+          echo "$GITHUB_SHA not yet deployed, current version is $DEPLOYED_VERSION. Waiting before checking again..."
+          sleep 60
+        done
+        echo "$GITHUB_SHA not deployed after 10 minutes."
+        exit 1
+      shell: bash
