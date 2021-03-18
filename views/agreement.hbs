@@ -211,34 +211,6 @@ input[type="submit"] {
   <p id="following-workstreams-addendum">(To change this selection, e.g., to participate in additional <a href="https://whatwg.org/workstream-policy#workstream">Workstreams</a>, discontinue participation in a Workstream, or switch between the "all WHATWG Workstreams, current and future" selection versus choosing individual Workstreams, notify the <a href="https://whatwg.org/sg-agreement#steering-group">Steering Group</a> using <a href="agreement-update">the Workstream update interface</a>.)</p>
  </div>
 
- <script>
- "use strict";
- (() => {
-  const allScope = document.querySelector('input[name="scope"][value="all"]');
-  const someScope = document.querySelector('input[name="scope"][value="some"]');
-  const invitedScope = document.querySelector('input[name="scope"][value="invited"]');
-  const workstreamFields = Array.from(document.querySelectorAll('#workstream-selection input'));
-
-  function syncState() {
-   const disabled = !someScope.checked;
-   for (const field of workstreamFields) {
-    field.disabled = disabled;
-    field.parentElement.classList.toggle('disabled-control', disabled);
-
-    if (disabled) {
-     field.checked = true;
-    }
-   }
-  }
-
-  syncState();
-  allScope.addEventListener('change', syncState);
-  someScope.addEventListener('change', syncState);
-  invitedScope.addEventListener('change', syncState);
- })();
- </script>
-
-
  <h3 id="signature">Signature</h3>
 
  <details id="individual-signature-container">
@@ -359,6 +331,67 @@ input[type="submit"] {
   </div>
  </details>
 
+ <script>
+ "use strict";
+ (() => {
+  // Synchronize Scope options
+  // - when not selected, someScope workstream choices are disabled
+  // - invited scope selection toggles individual-type self/invited disabled status + all entity forms
+  const allScope = document.querySelector('input[name="scope"][value="all"]');
+  const someScope = document.querySelector('input[name="scope"][value="some"]');
+  const invitedScope = document.querySelector('input[name="scope"][value="invited"]');
+  const workstreamFields = Array.from(document.querySelectorAll('#workstream-selection input'));
+  const individualSelf = document.querySelector('input[name="individual-type"][value="self"]');
+  const individualInvited = document.querySelector('input[name="individual-type"][value="invited"]');
+  const entityFields = Array.from(document.querySelectorAll('#entity-signature-container input'));
+
+  function syncState() {
+   const disabled = !someScope.checked;
+   for (const field of workstreamFields) {
+    setDisableStateWithLabel(field, disabled, false);
+
+    if (disabled) {
+     field.checked = true;
+    }
+   }
+   setDisableStateWithLabel(individualSelf, invitedScope.checked, true);
+   setDisableStateWithLabel(individualInvited, !invitedScope.checked, true);
+   if (invitedScope.checked) {
+    individualSelf.checked = false;
+   }
+   else {
+    individualInvited.checked = false;
+   }
+   for (const field of entityFields) {
+    setDisableStateWithLabel(field, invitedScope.checked, true);
+   }
+  }
+
+  function setDisableStateWithLabel(input, state, addPersistence) {
+   input.disabled = state;
+   if (addPersistence) {
+    if (state) {
+     input.dataset.enableException = "";
+    }
+    else {
+     delete input.dataset.enableException;
+    }
+   }
+   if (input.type == "checkbox" || input.type == "radio") {
+    input.parentElement.classList.toggle('disabled-control', state);
+   }
+   else {
+    input.previousElementSibling.classList.toggle('disabled-control', state);
+   }
+  }
+
+  syncState();
+  allScope.addEventListener('change', syncState);
+  someScope.addEventListener('change', syncState);
+  invitedScope.addEventListener('change', syncState);
+ })();
+ </script>
+
 
  <script>
  "use strict";
@@ -385,7 +418,8 @@ input[type="submit"] {
     }
 
     for (const typeForInputs of types) {
-     setInputsEnabledness(typeForInputs, containers[typeForInputs].hasAttribute('open'));
+     let enableExceptions = Array.from(containers[typeForInputs].querySelectorAll('input[data-enable-exception]') || []);
+     setInputsEnabledness(typeForInputs, containers[typeForInputs].hasAttribute('open'), enableExceptions);
     }
 
     if (signature.value.trim().length > 0) {
@@ -413,12 +447,13 @@ input[type="submit"] {
   contact2Name.addEventListener('input', syncBackupContact);
   syncBackupContact();
 
-  function setInputsEnabledness(type, shouldBeEnabled) {
+  function setInputsEnabledness(type, shouldBeEnabled, enableExceptions) {
    const container = containers[type];
    const inputs = Array.from(container.querySelectorAll('input'));
 
    for (const input of inputs) {
-    input.disabled = !shouldBeEnabled;
+    // skip enabling if exception is present
+    input.disabled = !(shouldBeEnabled && !enableExceptions.includes(input));
    }
   }
  })();
