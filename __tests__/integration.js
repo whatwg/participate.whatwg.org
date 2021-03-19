@@ -25,6 +25,18 @@ test("responds to requests to the homepage", async () => {
   expect(body).toContain("participate in the WHATWG");
 });
 
+test.only("send the expected headers", async () => {
+  const url = `http://127.0.0.1:${server.address().port}/`;
+
+  const res = await fetch(url);
+  expect(res.status).toEqual(200);
+
+  expect(res.headers.get("strict-transport-security"))
+    .toEqual("max-age=63072000; includeSubDomains; preload");
+  expect(res.headers.get("x-content-type-options")).toEqual("nosniff");
+  expect(res.headers.get("x-frame-options")).toEqual("deny");
+});
+
 test("/agreement-status throws appropriate error for incorrect pull parameter", async () => {
   const url = `http://127.0.0.1:${server.address().port}/agreement-status?user=test&repo=test&pull=<script>alert(1)</script>`;
 
