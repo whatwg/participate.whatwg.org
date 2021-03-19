@@ -25,7 +25,7 @@ test("responds to requests to the homepage", async () => {
   expect(body).toContain("participate in the WHATWG");
 });
 
-test.only("send the expected headers", async () => {
+test("send the expected headers", async () => {
   const url = `http://127.0.0.1:${server.address().port}/`;
 
   const res = await fetch(url);
