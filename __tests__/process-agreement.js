@@ -39,6 +39,7 @@ test("A body with both individual and entity fields must throw BadRequest", () =
 function goodIndividualRequest() {
   return {
     scope: "all",
+    "individual-type": "self",
     "individual-name": "Domenic Denicola",
     "individual-address": "New York, NY, USA",
     "individual-email": "d@domenic.me",
@@ -77,6 +78,57 @@ test("An individual sending a single unknown workstream must throw BadRequest", 
   expect(() => submitAgreement(request)).toThrow(BadRequest);
 });
 
+test("An invited individual with all the workstreams must throw BadRequest", () => {
+  const request = goodIndividualRequest();
+  request["individual-type"] = "invited";
+  request.scope = "all";
+
+  expect(() => submitAgreement(request)).toThrow(BadRequest);
+});
+
+test("An invited individual with a single non-invited workstream must throw BadRequest", () => {
+  const request = goodIndividualRequest();
+  request["individual-type"] = "invited";
+  request.scope = "some";
+  request["scope-workstreams"] = "compat";
+
+  expect(() => submitAgreement(request)).toThrow(BadRequest);
+});
+
+test("An invited individual with multiple non-invited workstreams must throw BadRequest", () => {
+  const request = goodIndividualRequest();
+  request["individual-type"] = "invited";
+  request.scope = "some";
+  request["scope-workstreams"] = ["compat", "console", "xhr"];
+
+  expect(() => submitAgreement(request)).toThrow(BadRequest);
+});
+
+test("An invited individual with scope-workstreams set must throw BadRequest", () => {
+  const request = goodIndividualRequest();
+  request["individual-type"] = "invited";
+  request.scope = "invited";
+  request["scope-workstreams"] = ["compat", "console", "xhr"];
+
+  expect(() => submitAgreement(request)).toThrow(BadRequest);
+});
+
+test("A non-invited individual with scope set to invited must throw BadRequest", () => {
+  const request = goodIndividualRequest();
+  request["individual-type"] = "self";
+  request.scope = "invited";
+
+  expect(() => submitAgreement(request)).toThrow(BadRequest);
+});
+
+test("An invited individual with invited as their workstreams must transform appropriately", () => {
+  const request = goodIndividualRequest();
+  request["individual-type"] = "invited";
+  request.scope = "invited";
+
+  expect(submitAgreement(request)).toMatchSnapshot();
+});
+
 const requiredIndividualKeys = Object.keys(goodIndividualRequest());
 for (const key of requiredIndividualKeys) {
   test(`Individual information missing ${key} must throw BadRequest`, () => {
@@ -94,6 +146,13 @@ for (const key of requiredIndividualKeys) {
     });
   }
 }
+
+test("An individual with an invalid individual-type must throw BadRequest", () => {
+  const request = goodIndividualRequest();
+  request["individual-type"] = "asdf";
+
+  expect(() => submitAgreement(request)).toThrow(BadRequest);
+});
 
 test("An individual with a signature mismatching the name must throw BadRequest", () => {
   const request = goodIndividualRequest();
@@ -178,6 +237,13 @@ function goodEntityRequest() {
 
 test("An entity with a scope of \"all\" must transform appropriately", () => {
   expect(submitAgreement(goodEntityRequest())).toMatchSnapshot();
+});
+
+test("An entity with a scope of \"invited\" must throw BadRequest", () => {
+  const request = goodEntityRequest();
+  request.scope = "invited";
+
+  expect(() => submitAgreement(request)).toThrow(BadRequest);
 });
 
 test("An entity with an array of known scopes must transform appropriately", () => {

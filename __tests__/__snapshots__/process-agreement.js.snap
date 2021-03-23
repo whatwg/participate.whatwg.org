@@ -150,3 +150,29 @@ Object {
   "type": "individual",
 }
 `;
+
+exports[`An invited individual with invited as their workstreams must transform appropriately 1`] = `
+Object {
+  "privateData": Object {
+    "id": "1d8ab899-4d91-48b8-acfa-bf9cde5ad909",
+    "info": Object {
+      "address": "New York, NY, USA",
+      "email": "d@domenic.me",
+    },
+  },
+  "publicData": Object {
+    "id": "1d8ab899-4d91-48b8-acfa-bf9cde5ad909",
+    "info": Object {
+      "gitHubID": "domenic",
+      "name": "Domenic Denicola",
+    },
+    "invited": true,
+    "signature": Object {
+      "signedAt": "1970-01-01T00:00:00.000Z",
+    },
+    "verified": false,
+    "workstreams": "Verifier: replace this with the array of workstreams the SG has invited this individual to, or replace it with \\"all\\" if they're invited to all workstreams.",
+  },
+  "type": "individual",
+}
+`;
