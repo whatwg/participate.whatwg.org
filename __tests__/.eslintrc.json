@@ -1,8 +1,10 @@
 {
   "extends": "../.eslintrc.json",
   "env": {
-    "node": true,
-    "es6": true,
     "jest": true
+  },
+  "rules": {
+    // Plays poorly with how we set up mocks.
+    "no-loop-func": "off"
   }
 }
