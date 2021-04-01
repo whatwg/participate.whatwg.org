@@ -38,7 +38,7 @@ test("A body with both individual and entity fields must throw BadRequest", () =
 
 function goodIndividualRequest() {
   return {
-    scope: "all",
+    "scope": "all",
     "individual-type": "self",
     "individual-name": "Domenic Denicola",
     "individual-address": "New York, NY, USA",
@@ -217,7 +217,7 @@ test("An individual with an otherwise-invalid GitHub ID must throw BadRequest", 
 
 function goodEntityRequest() {
   return {
-    scope: "all",
+    "scope": "all",
     "entity-name": "Contoso Ltd.",
     "entity-address": "123 Main Street, New York, NY, USA",
     "entity-url": "https://contoso.com/",
@@ -440,7 +440,7 @@ const factories = {
 };
 
 for (const [label, requestFactory] of Object.entries(factories)) {
-  test(label + " with an invalid scope value must throw BadRequest", () => {
+  test(`${label} with an invalid scope value must throw BadRequest`, () => {
     const request = requestFactory();
     request.scope = "blah";
 

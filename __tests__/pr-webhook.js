@@ -12,8 +12,7 @@ jest.mock("../lib/get-user-status.js", () => {
   };
 });
 
-let mockCreateStatus;
-let mockPRGet;
+let mockCreateStatus, mockPRGet;
 jest.mock("../lib/helpers/github.js", () => {
   return {
     api: {
