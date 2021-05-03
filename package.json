@@ -17,7 +17,7 @@
     "@domenic/eslint-config": "^1.2.0",
     "@koa/router": "^10.0.0",
     "@octokit/rest": "^18.5.3",
-    "escape-goat": "^3.0.0",
+    "escape-goat": "^4.0.0",
     "github-username-regex": "^1.0.0",
     "handlebars": "^4.7.7",
     "http-errors": "^1.8.0",
