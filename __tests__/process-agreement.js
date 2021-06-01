@@ -9,18 +9,10 @@ jest.mock("uuid", () => {
   };
 });
 
-const fakeTimers = require("@sinonjs/fake-timers");
+jest.useFakeTimers().setSystemTime(0);
+
 const submitAgreement = require("../lib/process-agreement.js");
 const { BadRequest } = require("http-errors");
-
-// Fake the clock so that signature timestamps are deterministic for snapshot testing.
-let clock;
-beforeAll(() => {
-  clock = fakeTimers.install({ toFake: ["Date"] });
-});
-afterAll(() => {
-  clock.uninstall();
-});
 
 // General
 
