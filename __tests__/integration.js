@@ -1,5 +1,5 @@
 "use strict";
-const fetch = require("node-fetch");
+const fetch = require("minipass-fetch");
 
 // The sample config should suffice for just starting up the server.
 // We may need something fancier if the integration tests get more in-depth.
