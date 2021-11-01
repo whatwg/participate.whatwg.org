@@ -4,7 +4,8 @@ WORKDIR /app
 
 COPY . .
 
-RUN npm install --production
+# --ignore-scripts since we'll get sg/db.json on the following line.
+RUN npm install --production --ignore-scripts
 
 ADD https://github.com/whatwg/sg/raw/main/db.json sg/db.json
 
