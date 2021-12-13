@@ -6,7 +6,10 @@ on:
   push:
     branches:
     - main
-  workflow_dispatch:
+  # Trigger for changes in the whatwg/sg repo.
+  repository_dispatch:
+    types:
+    - sg_repo_updated
 jobs:
   test:
     name: Test
