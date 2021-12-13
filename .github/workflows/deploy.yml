@@ -28,7 +28,7 @@ jobs:
   # succeeds.
   verify-deploy:
     name: Verify Deploy
-    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+    if: ${{ (github.event_name == 'push' || github.event_name == 'repository_dispatch') && github.ref == 'refs/heads/main' }}
     needs: test
     runs-on: ubuntu-20.04
     steps:
