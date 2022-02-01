@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "eslint": "^7.32.0",
-    "jest": "^27.4.5",
+    "jest": "^27.4.7",
     "minipass-fetch": "^1.4.1"
   },
   "volta": {
