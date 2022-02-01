@@ -14,7 +14,7 @@
     "coverage": "jest --coverage"
   },
   "dependencies": {
-    "@domenic/eslint-config": "^1.4.0",
+    "@domenic/eslint-config": "^2.0.0",
     "@koa/router": "^10.1.1",
     "@octokit/rest": "^18.11.4",
     "escape-goat": "^3.0.0",
@@ -30,7 +30,7 @@
     "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "eslint": "^7.32.0",
+    "eslint": "^8.8.0",
     "jest": "^27.4.7",
     "minipass-fetch": "^1.4.1"
   },
