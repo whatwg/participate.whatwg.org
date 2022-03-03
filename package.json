@@ -32,7 +32,7 @@
   "devDependencies": {
     "eslint": "^8.10.0",
     "jest": "^27.4.7",
-    "minipass-fetch": "^1.4.1"
+    "minipass-fetch": "^2.0.2"
   },
   "volta": {
     "node": "16.13.0"
