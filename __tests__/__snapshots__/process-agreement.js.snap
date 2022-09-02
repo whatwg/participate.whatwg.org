@@ -1,18 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`An entity with a scope of "all" must transform appropriately 1`] = `
-Object {
+{
   "privateData": null,
-  "publicData": Object {
+  "publicData": {
     "id": "1d8ab899-4d91-48b8-acfa-bf9cde5ad909",
-    "info": Object {
+    "info": {
       "address": "123 Main Street, New York, NY, USA",
-      "contact1": Object {
+      "contact1": {
         "email": "ellen@contoso.com",
         "gitHubID": "ellencontoso",
         "name": "Ellen Adams",
       },
-      "contact2": Object {
+      "contact2": {
         "email": "lisa@contoso.com",
         "gitHubID": "lisacontoso",
         "name": "Lisa Andrews",
@@ -21,7 +21,7 @@ Object {
       "name": "Contoso Ltd.",
       "url": "https://contoso.com/",
     },
-    "signature": Object {
+    "signature": {
       "signedAt": "1970-01-01T00:00:00.000Z",
       "signedBy": "Domenic Denicola",
       "signedByTitle": "Software engineer",
@@ -34,18 +34,18 @@ Object {
 `;
 
 exports[`An entity with an array of known scopes must transform appropriately 1`] = `
-Object {
+{
   "privateData": null,
-  "publicData": Object {
+  "publicData": {
     "id": "1d8ab899-4d91-48b8-acfa-bf9cde5ad909",
-    "info": Object {
+    "info": {
       "address": "123 Main Street, New York, NY, USA",
-      "contact1": Object {
+      "contact1": {
         "email": "ellen@contoso.com",
         "gitHubID": "ellencontoso",
         "name": "Ellen Adams",
       },
-      "contact2": Object {
+      "contact2": {
         "email": "lisa@contoso.com",
         "gitHubID": "lisacontoso",
         "name": "Lisa Andrews",
@@ -54,13 +54,13 @@ Object {
       "name": "Contoso Ltd.",
       "url": "https://contoso.com/",
     },
-    "signature": Object {
+    "signature": {
       "signedAt": "1970-01-01T00:00:00.000Z",
       "signedBy": "Domenic Denicola",
       "signedByTitle": "Software engineer",
     },
     "verified": false,
-    "workstreams": Array [
+    "workstreams": [
       "compat",
       "console",
       "xhr",
@@ -71,25 +71,25 @@ Object {
 `;
 
 exports[`An individual selecting a single known workstream must transform appropriately 1`] = `
-Object {
-  "privateData": Object {
+{
+  "privateData": {
     "id": "1d8ab899-4d91-48b8-acfa-bf9cde5ad909",
-    "info": Object {
+    "info": {
       "address": "New York, NY, USA",
       "email": "d@domenic.me",
     },
   },
-  "publicData": Object {
+  "publicData": {
     "id": "1d8ab899-4d91-48b8-acfa-bf9cde5ad909",
-    "info": Object {
+    "info": {
       "gitHubID": "domenic",
       "name": "Domenic Denicola",
     },
-    "signature": Object {
+    "signature": {
       "signedAt": "1970-01-01T00:00:00.000Z",
     },
     "verified": false,
-    "workstreams": Array [
+    "workstreams": [
       "html",
     ],
   },
@@ -98,21 +98,21 @@ Object {
 `;
 
 exports[`An individual with a scope of "all" must transform appropriately 1`] = `
-Object {
-  "privateData": Object {
+{
+  "privateData": {
     "id": "1d8ab899-4d91-48b8-acfa-bf9cde5ad909",
-    "info": Object {
+    "info": {
       "address": "New York, NY, USA",
       "email": "d@domenic.me",
     },
   },
-  "publicData": Object {
+  "publicData": {
     "id": "1d8ab899-4d91-48b8-acfa-bf9cde5ad909",
-    "info": Object {
+    "info": {
       "gitHubID": "domenic",
       "name": "Domenic Denicola",
     },
-    "signature": Object {
+    "signature": {
       "signedAt": "1970-01-01T00:00:00.000Z",
     },
     "verified": false,
@@ -123,25 +123,25 @@ Object {
 `;
 
 exports[`An individual with an array of known scopes must transform appropriately 1`] = `
-Object {
-  "privateData": Object {
+{
+  "privateData": {
     "id": "1d8ab899-4d91-48b8-acfa-bf9cde5ad909",
-    "info": Object {
+    "info": {
       "address": "New York, NY, USA",
       "email": "d@domenic.me",
     },
   },
-  "publicData": Object {
+  "publicData": {
     "id": "1d8ab899-4d91-48b8-acfa-bf9cde5ad909",
-    "info": Object {
+    "info": {
       "gitHubID": "domenic",
       "name": "Domenic Denicola",
     },
-    "signature": Object {
+    "signature": {
       "signedAt": "1970-01-01T00:00:00.000Z",
     },
     "verified": false,
-    "workstreams": Array [
+    "workstreams": [
       "compat",
       "console",
       "xhr",
@@ -152,26 +152,26 @@ Object {
 `;
 
 exports[`An invited individual with invited as their workstreams must transform appropriately 1`] = `
-Object {
-  "privateData": Object {
+{
+  "privateData": {
     "id": "1d8ab899-4d91-48b8-acfa-bf9cde5ad909",
-    "info": Object {
+    "info": {
       "address": "New York, NY, USA",
       "email": "d@domenic.me",
     },
   },
-  "publicData": Object {
+  "publicData": {
     "id": "1d8ab899-4d91-48b8-acfa-bf9cde5ad909",
-    "info": Object {
+    "info": {
       "gitHubID": "domenic",
       "name": "Domenic Denicola",
     },
     "invited": true,
-    "signature": Object {
+    "signature": {
       "signedAt": "1970-01-01T00:00:00.000Z",
     },
     "verified": false,
-    "workstreams": "Verifier: replace this with the array of workstreams the SG has invited this individual to, or replace it with \\"all\\" if they're invited to all workstreams.",
+    "workstreams": "Verifier: replace this with the array of workstreams the SG has invited this individual to, or replace it with "all" if they're invited to all workstreams.",
   },
   "type": "individual",
 }

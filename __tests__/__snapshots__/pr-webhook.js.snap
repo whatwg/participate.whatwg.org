@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`A PR from a branch must trigger an appropriate status update 1`] = `
-Array [
-  Object {
+[
+  {
     "owner": "whatwg",
     "repo": "console",
     "sha": "80a564b821732bebe6ea082db7c699389ecf4716",
@@ -13,8 +13,8 @@ Array [
 `;
 
 exports[`A PR from a fork must trigger an appropriate status update 1`] = `
-Array [
-  Object {
+[
+  {
     "owner": "whatwg",
     "repo": "console",
     "sha": "0744fdd6281170d629cee5c6bc26eda1b8ebdb95",
