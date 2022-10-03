@@ -98,7 +98,7 @@ label.disabled-control {
  <output id="result"></output>
 </form>
 
-<script>
+<script nonce="{{@koa.state.cspNonce}}">
 "use strict";
 (() => {
  const form = document.querySelector("#refresh-pr");
