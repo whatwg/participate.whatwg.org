@@ -16,7 +16,7 @@
   "dependencies": {
     "@domenic/eslint-config": "^3.0.0",
     "@koa/router": "^12.0.0",
-    "@octokit/rest": "^20.0.1",
+    "@octokit/rest": "^20.0.2",
     "escape-goat": "^3.0.0",
     "github-username-regex": "^1.0.0",
     "handlebars": "^4.7.8",
