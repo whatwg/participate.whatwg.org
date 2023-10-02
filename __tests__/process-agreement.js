@@ -1,9 +1,10 @@
 "use strict";
 
 // Fake the UUID generator so it is deterministic for snapshot testing.
-jest.mock("uuid", () => {
+jest.mock("crypto", () => {
   return {
-    v4() {
+    ...jest.requireActual("crypto"),
+    randomUUID() {
       return "1d8ab899-4d91-48b8-acfa-bf9cde5ad909";
     }
   };
