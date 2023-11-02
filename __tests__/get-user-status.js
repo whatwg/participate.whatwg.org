@@ -187,6 +187,16 @@ for (const pull of [undefined, "120"]) {
     expect(await getUserStatus("johndoetw", "console", pull)).toMatchSnapshot();
   });
 
+  test("Three entities", async () => {
+    mockOrgMemberships.set("johndoetw", ["contoso1", "contoso2", "contoso3"]);
+    mockData.set("entity", [
+      entityData(["xhr"], true, { name: "Contoso 1", org: "contoso1" }),
+      entityData(["xhr"], true, { name: "Contoso 2", org: "contoso2" }),
+      entityData(["xhr"], true, { name: "Contoso 3", org: "contoso3" })
+    ]);
+    expect(await getUserStatus("johndoetw", "console", pull)).toMatchSnapshot();
+  });
+
 
   test("Entities exist, but the user is not in them", async () => {
     mockOrgMemberships.set("johndoetw", []);
