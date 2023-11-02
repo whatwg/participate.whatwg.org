@@ -374,6 +374,28 @@ exports[`No data 2`] = `
 }
 `;
 
+exports[`Three entities 1`] = `
+{
+  "context": "Participation",
+  "description": "@johndoetw participates on behalf of a non-workstream entity",
+  "isNothing": false,
+  "longDescription": "@johndoetw is part of the contoso1, contoso2, and contoso3 GitHub organizations, but they all do not participate in the Console workstream. Please have the contact for those organizations update their participation agreement.",
+  "state": "pending",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console",
+}
+`;
+
+exports[`Three entities 2`] = `
+{
+  "context": "Participation",
+  "description": "@johndoetw participates on behalf of a non-workstream entity",
+  "isNothing": false,
+  "longDescription": "@johndoetw is part of the contoso1, contoso2, and contoso3 GitHub organizations, but they all do not participate in the Console workstream. Please have the contact for those organizations update their participation agreement.",
+  "state": "pending",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console&pull=120",
+}
+`;
+
 exports[`Via entity, participating in all workstreams, unverified 1`] = `
 {
   "context": "Participation",
