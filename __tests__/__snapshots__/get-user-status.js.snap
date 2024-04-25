@@ -247,7 +247,7 @@ exports[`Multiple entities, all unverified 1`] = `
   "context": "Participation",
   "description": "@johndoetw participates on behalf of an unverified entity",
   "isNothing": false,
-  "longDescription": "@johndoetw is part of the contoso1 and contoso2 GitHub organizations, but they all have not yet been verified. Hold tight while we sort this out on our end! If you are a spec editor, follow <a href="https://github.com/whatwg/participate.whatwg.org#process-for-editors">these instructions</a> to verify this entity.",
+  "longDescription": "@johndoetw is part of the contoso1 and contoso2 GitHub organizations, but they all have not yet been verified. Hold tight while we sort this out on our end! If you are a spec editor, follow <a href="https://github.com/whatwg/participate.whatwg.org#process-for-editors">these instructions</a> to verify those organizations.",
   "state": "pending",
   "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console",
 }
@@ -258,7 +258,7 @@ exports[`Multiple entities, all unverified 2`] = `
   "context": "Participation",
   "description": "@johndoetw participates on behalf of an unverified entity",
   "isNothing": false,
-  "longDescription": "@johndoetw is part of the contoso1 and contoso2 GitHub organizations, but they all have not yet been verified. Hold tight while we sort this out on our end! If you are a spec editor, follow <a href="https://github.com/whatwg/participate.whatwg.org#process-for-editors">these instructions</a> to verify this entity.",
+  "longDescription": "@johndoetw is part of the contoso1 and contoso2 GitHub organizations, but they all have not yet been verified. Hold tight while we sort this out on our end! If you are a spec editor, follow <a href="https://github.com/whatwg/participate.whatwg.org#process-for-editors">these instructions</a> to verify those organizations.",
   "state": "pending",
   "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console&pull=120",
 }
@@ -401,7 +401,7 @@ exports[`Via entity, participating in all workstreams, unverified 1`] = `
   "context": "Participation",
   "description": "@johndoetw participates on behalf of an unverified entity",
   "isNothing": false,
-  "longDescription": "@johndoetw is part of the contoso GitHub organization, but it has not yet been verified. Hold tight while we sort this out on our end! If you are a spec editor, follow <a href="https://github.com/whatwg/participate.whatwg.org#process-for-editors">these instructions</a> to verify this entity.",
+  "longDescription": "@johndoetw is part of the contoso GitHub organization, but it has not yet been verified. Hold tight while we sort this out on our end! If you are a spec editor, follow <a href="https://github.com/whatwg/participate.whatwg.org#process-for-editors">these instructions</a> to verify this organization.",
   "state": "pending",
   "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console",
 }
@@ -412,7 +412,7 @@ exports[`Via entity, participating in all workstreams, unverified 2`] = `
   "context": "Participation",
   "description": "@johndoetw participates on behalf of an unverified entity",
   "isNothing": false,
-  "longDescription": "@johndoetw is part of the contoso GitHub organization, but it has not yet been verified. Hold tight while we sort this out on our end! If you are a spec editor, follow <a href="https://github.com/whatwg/participate.whatwg.org#process-for-editors">these instructions</a> to verify this entity.",
+  "longDescription": "@johndoetw is part of the contoso GitHub organization, but it has not yet been verified. Hold tight while we sort this out on our end! If you are a spec editor, follow <a href="https://github.com/whatwg/participate.whatwg.org#process-for-editors">these instructions</a> to verify this organization.",
   "state": "pending",
   "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console&pull=120",
 }
@@ -445,7 +445,7 @@ exports[`Via entity, participating in other workstreams but not that one, unveri
   "context": "Participation",
   "description": "@johndoetw participates on behalf of an unverified entity",
   "isNothing": false,
-  "longDescription": "@johndoetw is part of the contoso GitHub organization, but it has not yet been verified. Hold tight while we sort this out on our end! If you are a spec editor, follow <a href="https://github.com/whatwg/participate.whatwg.org#process-for-editors">these instructions</a> to verify this entity.",
+  "longDescription": "@johndoetw is part of the contoso GitHub organization, but it has not yet been verified. Hold tight while we sort this out on our end! If you are a spec editor, follow <a href="https://github.com/whatwg/participate.whatwg.org#process-for-editors">these instructions</a> to verify this organization.",
   "state": "pending",
   "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console",
 }
@@ -456,7 +456,7 @@ exports[`Via entity, participating in other workstreams but not that one, unveri
   "context": "Participation",
   "description": "@johndoetw participates on behalf of an unverified entity",
   "isNothing": false,
-  "longDescription": "@johndoetw is part of the contoso GitHub organization, but it has not yet been verified. Hold tight while we sort this out on our end! If you are a spec editor, follow <a href="https://github.com/whatwg/participate.whatwg.org#process-for-editors">these instructions</a> to verify this entity.",
+  "longDescription": "@johndoetw is part of the contoso GitHub organization, but it has not yet been verified. Hold tight while we sort this out on our end! If you are a spec editor, follow <a href="https://github.com/whatwg/participate.whatwg.org#process-for-editors">these instructions</a> to verify this organization.",
   "state": "pending",
   "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console&pull=120",
 }
@@ -489,7 +489,7 @@ exports[`Via entity, participating in that particular workstream, unverified 1`]
   "context": "Participation",
   "description": "@johndoetw participates on behalf of an unverified entity",
   "isNothing": false,
-  "longDescription": "@johndoetw is part of the contoso GitHub organization, but it has not yet been verified. Hold tight while we sort this out on our end! If you are a spec editor, follow <a href="https://github.com/whatwg/participate.whatwg.org#process-for-editors">these instructions</a> to verify this entity.",
+  "longDescription": "@johndoetw is part of the contoso GitHub organization, but it has not yet been verified. Hold tight while we sort this out on our end! If you are a spec editor, follow <a href="https://github.com/whatwg/participate.whatwg.org#process-for-editors">these instructions</a> to verify this organization.",
   "state": "pending",
   "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console",
 }
@@ -500,7 +500,7 @@ exports[`Via entity, participating in that particular workstream, unverified 2`]
   "context": "Participation",
   "description": "@johndoetw participates on behalf of an unverified entity",
   "isNothing": false,
-  "longDescription": "@johndoetw is part of the contoso GitHub organization, but it has not yet been verified. Hold tight while we sort this out on our end! If you are a spec editor, follow <a href="https://github.com/whatwg/participate.whatwg.org#process-for-editors">these instructions</a> to verify this entity.",
+  "longDescription": "@johndoetw is part of the contoso GitHub organization, but it has not yet been verified. Hold tight while we sort this out on our end! If you are a spec editor, follow <a href="https://github.com/whatwg/participate.whatwg.org#process-for-editors">these instructions</a> to verify this organization.",
   "state": "pending",
   "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console&pull=120",
 }
