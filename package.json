@@ -25,7 +25,7 @@
     "koa": "^2.15.3",
     "koa-bodyparser": "^4.4.1",
     "koa-handlebars": "^2.0.0",
-    "twitter-api-v2": "^1.17.0"
+    "twitter-api-v2": "^1.17.1"
   },
   "devDependencies": {
     "eslint": "^8.57.0",
