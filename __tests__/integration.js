@@ -3,7 +3,6 @@
 // The sample config should suffice for just starting up the server.
 // We may need something fancier if the integration tests get more in-depth.
 jest.mock("../private-config.json", () => {
-  // eslint-disable-next-line global-require
   return require("../private-config.sample.json");
 }, { virtual: true });
 
