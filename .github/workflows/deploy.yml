@@ -30,7 +30,7 @@ jobs:
     name: Verify Deploy
     if: ${{ (github.event_name == 'push' || github.event_name == 'repository_dispatch') && github.ref == 'refs/heads/main' }}
     needs: test
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
     - run: |
         for i in {1..10}; do
