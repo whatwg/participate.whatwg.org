@@ -20,7 +20,7 @@
     "github-username-regex": "^1.0.0",
     "handlebars": "^4.7.8",
     "http-errors": "^2.0.0",
-    "http-graceful-shutdown": "^3.1.13",
+    "http-graceful-shutdown": "^3.1.14",
     "koa": "^2.15.3",
     "koa-bodyparser": "^4.4.1",
     "koa-handlebars": "^2.0.0",
