@@ -5,18 +5,14 @@ const { BadRequest } = httpErrors;
 let submitAgreement;
 before(async () => {
   // Fake the UUID generator so it is deterministic for snapshot testing.
-  mock.module("crypto", {
-    namedExports: {
-      randomUUID() {
-        return "1d8ab899-4d91-48b8-acfa-bf9cde5ad909";
-      }
-    }
+  mock.method(crypto, "randomUUID", () => {
+    return "1d8ab899-4d91-48b8-acfa-bf9cde5ad909";
   });
 
   // Mock Date.now() to return 0 for deterministic testing
   mock.timers.enable({ apis: ["Date"], now: 0 });
 
-  submitAgreement = (await import("../lib/process-agreement.js")).default;
+  submitAgreement = (await import("../lib/process-agreement.mjs")).default;
 });
 
 // General

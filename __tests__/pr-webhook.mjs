@@ -6,7 +6,7 @@ import fromMain from "./__fixtures__/pr-from-main-hook-payload.json" with { type
 
 let mockCreateStatus, mockPRGet, prWebhook;
 before(async () => {
-  mock.module("../lib/get-user-status.js", {
+  mock.module("../lib/get-user-status.mjs", {
     defaultExport: () => {
       return {
         statusField1: "status value 1",
@@ -15,8 +15,8 @@ before(async () => {
     }
   });
 
-  mock.module("../lib/helpers/github.js", {
-    defaultExport: {
+  mock.module("../lib/helpers/github.mjs", {
+    namedExports: {
       api: {
         repos: {
           get createCommitStatus() {
@@ -32,7 +32,7 @@ before(async () => {
     }
   });
 
-  prWebhook = (await import("../lib/pr-webhook.js")).default;
+  prWebhook = (await import("../lib/pr-webhook.mjs")).default;
 });
 
 beforeEach(() => {

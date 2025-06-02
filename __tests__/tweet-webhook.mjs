@@ -36,7 +36,7 @@ before(async () => {
     }
   });
 
-  tweetWebhook = (await import("../lib/tweet-webhook.js")).default;
+  tweetWebhook = (await import("../lib/tweet-webhook.mjs")).default;
 });
 
 beforeEach(() => {

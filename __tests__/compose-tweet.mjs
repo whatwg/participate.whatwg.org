@@ -77,7 +77,7 @@ const mockCommits = [
   }
 ];
 
-import composeTweet from "../lib/compose-tweet.js";
+import composeTweet from "../lib/compose-tweet.mjs";
 
 for (const mockCommit of mockCommits) {
   test(mockCommit.name, t => {

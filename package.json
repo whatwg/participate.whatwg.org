@@ -6,7 +6,7 @@
   "author": "Domenic Denicola <d@domenic.me> (https://domenic.me/)",
   "license": "Apache-2.0",
   "scripts": {
-    "start": "node lib/app.js",
+    "start": "node lib/app.mjs",
     "lint": "eslint",
     "prepare": "npm run update-sg",
     "test": "node --import \"./__tests__/__setup__.mjs\" --experimental-test-module-mocks --test \"./__tests__/**/*.mjs\"",
