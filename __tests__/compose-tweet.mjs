@@ -1,4 +1,4 @@
-"use strict";
+import { test } from "node:test";
 
 const mockStandard = { authors: [{ email: "a@example.com" }, { email: "b@example.com" }] };
 
@@ -77,10 +77,10 @@ const mockCommits = [
   }
 ];
 
-const composeTweet = require("../lib/compose-tweet.js");
+import composeTweet from "../lib/compose-tweet.js";
 
 for (const mockCommit of mockCommits) {
-  test(mockCommit.name, () => {
-    expect(composeTweet(mockCommit.input, mockStandard)).toEqual(mockCommit.expected);
+  test(mockCommit.name, t => {
+    t.assert.strictEqual(composeTweet(mockCommit.input, mockStandard), mockCommit.expected);
   });
 }

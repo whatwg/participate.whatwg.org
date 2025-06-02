@@ -1,5 +1,3 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
 exports[`A PR from a branch must trigger an appropriate status update 1`] = `
 [
   {
@@ -7,8 +5,8 @@ exports[`A PR from a branch must trigger an appropriate status update 1`] = `
     "repo": "console",
     "sha": "80a564b821732bebe6ea082db7c699389ecf4716",
     "statusField1": "status value 1",
-    "statusField2": "status value 2",
-  },
+    "statusField2": "status value 2"
+  }
 ]
 `;
 
@@ -19,8 +17,8 @@ exports[`A PR from a fork must trigger an appropriate status update 1`] = `
     "repo": "console",
     "sha": "d9dd6d011d09e3b423adc681d3a2fee6c4e1cce2",
     "statusField1": "status value 1",
-    "statusField2": "status value 2",
-  },
+    "statusField2": "status value 2"
+  }
 ]
 `;
 
@@ -31,8 +29,8 @@ exports[`A PR with /commits at the end must still trigger an appropriate status 
     "repo": "console",
     "sha": "d9dd6d011d09e3b423adc681d3a2fee6c4e1cce2",
     "statusField1": "status value 1",
-    "statusField2": "status value 2",
-  },
+    "statusField2": "status value 2"
+  }
 ]
 `;
 
@@ -43,8 +41,8 @@ exports[`A PR with /files at the end must still trigger an appropriate status up
     "repo": "console",
     "sha": "d9dd6d011d09e3b423adc681d3a2fee6c4e1cce2",
     "statusField1": "status value 1",
-    "statusField2": "status value 2",
-  },
+    "statusField2": "status value 2"
+  }
 ]
 `;
 
@@ -55,7 +53,7 @@ exports[`A PR with a hash at the end must still trigger an appropriate status up
     "repo": "console",
     "sha": "d9dd6d011d09e3b423adc681d3a2fee6c4e1cce2",
     "statusField1": "status value 1",
-    "statusField2": "status value 2",
-  },
+    "statusField2": "status value 2"
+  }
 ]
 `;

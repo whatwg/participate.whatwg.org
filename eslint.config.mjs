@@ -12,6 +12,13 @@ export default [
       globals: globals.node
     }
   },
+  {
+    files: ["**/*.mjs"],
+    languageOptions: {
+      sourceType: "module",
+      globals: globals.node
+    }
+  },
   ...domenicConfig,
   {
     rules: {
@@ -19,10 +26,7 @@ export default [
     }
   },
   {
-    files: ["__tests__/**/*.js"],
-    languageOptions: {
-      globals: globals.jest
-    },
+    files: ["__tests__/**/*.mjs"],
     rules: {
       // Plays poorly with how we set up mocks.
       "no-loop-func": "off"
