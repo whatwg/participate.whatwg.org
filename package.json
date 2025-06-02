@@ -16,8 +16,8 @@
   },
   "dependencies": {
     "@koa/router": "^13.1.0",
-    "@octokit/rest": "^20.1.2",
-    "escape-goat": "^3.0.0",
+    "@octokit/rest": "^22.0.0",
+    "escape-goat": "^4.0.0",
     "github-username-regex": "^1.0.0",
     "handlebars": "^4.7.8",
     "http-errors": "^2.0.0",
