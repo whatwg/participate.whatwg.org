@@ -30,7 +30,7 @@ before(async () => {
     }
   });
 
-  workstreams = await import("../../lib/helpers/workstreams.js");
+  workstreams = await import("../../lib/helpers/workstreams.mjs");
 });
 
 test("repos", t => {

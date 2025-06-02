@@ -6,7 +6,7 @@ before(async () => {
     defaultExport: { webhook: { secret: "hunter2" } }
   });
 
-  validateGitHubWebhook = (await import("../../lib/server-infra/validate-github-webhook.js")).default;
+  validateGitHubWebhook = (await import("../../lib/server-infra/validate-github-webhook.mjs")).default;
 });
 
 [

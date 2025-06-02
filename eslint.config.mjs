@@ -6,13 +6,6 @@ export default [
     ignores: ["coverage/**/*"]
   },
   {
-    files: ["**/*.js"],
-    languageOptions: {
-      sourceType: "commonjs",
-      globals: globals.node
-    }
-  },
-  {
     files: ["**/*.mjs"],
     languageOptions: {
       sourceType: "module",

@@ -5,8 +5,8 @@ let mockOrgMemberships = new Map(); // GitHub user ID -> array of GitHub orgs
 
 let getUserStatus;
 before(async () => {
-  mock.module("../lib/helpers/json-github-database.js", {
-    defaultExport: {
+  mock.module("../lib/helpers/json-github-database.mjs", {
+    namedExports: {
       get(type) {
         return {
           sha: "doesn't matter",
@@ -16,8 +16,8 @@ before(async () => {
     }
   });
 
-  mock.module("../lib/helpers/github.js", {
-    defaultExport: {
+  mock.module("../lib/helpers/github.mjs", {
+    namedExports: {
       api: {
         orgs: {
           checkPublicMembershipForUser({ org, username }) {
@@ -32,7 +32,7 @@ before(async () => {
     }
   });
 
-  getUserStatus = (await import("../lib/get-user-status.js")).default;
+  getUserStatus = (await import("../lib/get-user-status.mjs")).default;
 });
 
 function individualData(workstreams, verified, { id = "johndoetw" } = {}) {

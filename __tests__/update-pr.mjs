@@ -8,7 +8,7 @@ import merged from "./__fixtures__/merged-pr.json" with { type: "json" };
 
 let mockCreateStatus, mockGet, updatePR;
 before(async () => {
-  mock.module("../lib/get-user-status.js", {
+  mock.module("../lib/get-user-status.mjs", {
     defaultExport: () => {
       return {
         statusField1: "status value 1",
@@ -17,8 +17,8 @@ before(async () => {
     }
   });
 
-  mock.module("../lib/helpers/github.js", {
-    defaultExport: {
+  mock.module("../lib/helpers/github.mjs", {
+    namedExports: {
       api: {
         pulls: {
           get get() {
@@ -34,7 +34,7 @@ before(async () => {
     }
   });
 
-  updatePR = (await import("../lib/update-pr.js")).default;
+  updatePR = (await import("../lib/update-pr.mjs")).default;
 });
 
 beforeEach(() => {

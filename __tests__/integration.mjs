@@ -8,7 +8,7 @@ before(async () => {
     defaultExport: (await import("../private-config.sample.json", { with: { type: "json" } })).default
   });
 
-  server = (await import("../lib/app.js")).default;
+  server = (await import("../lib/app.mjs")).default;
 });
 
 after(() => {
