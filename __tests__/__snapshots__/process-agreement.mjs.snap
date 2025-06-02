@@ -1,0 +1,176 @@
+exports[`An entity with a scope of \"all\" must transform appropriately 1`] = `
+{
+  "type": "entity",
+  "publicData": {
+    "id": "1d8ab899-4d91-48b8-acfa-bf9cde5ad909",
+    "verified": false,
+    "workstreams": "all",
+    "info": {
+      "name": "Contoso Ltd.",
+      "address": "123 Main Street, New York, NY, USA",
+      "url": "https://contoso.com/",
+      "gitHubOrganization": "contoso",
+      "contact1": {
+        "name": "Ellen Adams",
+        "email": "ellen@contoso.com",
+        "gitHubID": "ellencontoso"
+      },
+      "contact2": {
+        "name": "Lisa Andrews",
+        "email": "lisa@contoso.com",
+        "gitHubID": "lisacontoso"
+      }
+    },
+    "signature": {
+      "signedBy": "Domenic Denicola",
+      "signedByTitle": "Software engineer",
+      "signedAt": "1970-01-01T00:00:00.000Z"
+    }
+  },
+  "privateData": null
+}
+`;
+
+exports[`An entity with an array of known scopes must transform appropriately 1`] = `
+{
+  "type": "entity",
+  "publicData": {
+    "id": "1d8ab899-4d91-48b8-acfa-bf9cde5ad909",
+    "verified": false,
+    "workstreams": [
+      "compat",
+      "console",
+      "xhr"
+    ],
+    "info": {
+      "name": "Contoso Ltd.",
+      "address": "123 Main Street, New York, NY, USA",
+      "url": "https://contoso.com/",
+      "gitHubOrganization": "contoso",
+      "contact1": {
+        "name": "Ellen Adams",
+        "email": "ellen@contoso.com",
+        "gitHubID": "ellencontoso"
+      },
+      "contact2": {
+        "name": "Lisa Andrews",
+        "email": "lisa@contoso.com",
+        "gitHubID": "lisacontoso"
+      }
+    },
+    "signature": {
+      "signedBy": "Domenic Denicola",
+      "signedByTitle": "Software engineer",
+      "signedAt": "1970-01-01T00:00:00.000Z"
+    }
+  },
+  "privateData": null
+}
+`;
+
+exports[`An individual selecting a single known workstream must transform appropriately 1`] = `
+{
+  "type": "individual",
+  "publicData": {
+    "id": "1d8ab899-4d91-48b8-acfa-bf9cde5ad909",
+    "verified": false,
+    "workstreams": [
+      "html"
+    ],
+    "info": {
+      "name": "Domenic Denicola",
+      "gitHubID": "domenic"
+    },
+    "signature": {
+      "signedAt": "1970-01-01T00:00:00.000Z"
+    }
+  },
+  "privateData": {
+    "id": "1d8ab899-4d91-48b8-acfa-bf9cde5ad909",
+    "info": {
+      "address": "New York, NY, USA",
+      "email": "d@domenic.me"
+    }
+  }
+}
+`;
+
+exports[`An individual with a scope of \"all\" must transform appropriately 1`] = `
+{
+  "type": "individual",
+  "publicData": {
+    "id": "1d8ab899-4d91-48b8-acfa-bf9cde5ad909",
+    "verified": false,
+    "workstreams": "all",
+    "info": {
+      "name": "Domenic Denicola",
+      "gitHubID": "domenic"
+    },
+    "signature": {
+      "signedAt": "1970-01-01T00:00:00.000Z"
+    }
+  },
+  "privateData": {
+    "id": "1d8ab899-4d91-48b8-acfa-bf9cde5ad909",
+    "info": {
+      "address": "New York, NY, USA",
+      "email": "d@domenic.me"
+    }
+  }
+}
+`;
+
+exports[`An individual with an array of known scopes must transform appropriately 1`] = `
+{
+  "type": "individual",
+  "publicData": {
+    "id": "1d8ab899-4d91-48b8-acfa-bf9cde5ad909",
+    "verified": false,
+    "workstreams": [
+      "compat",
+      "console",
+      "xhr"
+    ],
+    "info": {
+      "name": "Domenic Denicola",
+      "gitHubID": "domenic"
+    },
+    "signature": {
+      "signedAt": "1970-01-01T00:00:00.000Z"
+    }
+  },
+  "privateData": {
+    "id": "1d8ab899-4d91-48b8-acfa-bf9cde5ad909",
+    "info": {
+      "address": "New York, NY, USA",
+      "email": "d@domenic.me"
+    }
+  }
+}
+`;
+
+exports[`An invited individual with invited as their workstreams must transform appropriately 1`] = `
+{
+  "type": "individual",
+  "publicData": {
+    "id": "1d8ab899-4d91-48b8-acfa-bf9cde5ad909",
+    "verified": false,
+    "workstreams": "Verifier: replace this with the array of workstreams the SG has invited this individual to, or replace it with \\"all\\" if they're invited to all workstreams.",
+    "info": {
+      "name": "Domenic Denicola",
+      "gitHubID": "domenic"
+    },
+    "signature": {
+      "signedAt": "1970-01-01T00:00:00.000Z"
+    },
+    "invited": true
+  },
+  "privateData": {
+    "id": "1d8ab899-4d91-48b8-acfa-bf9cde5ad909",
+    "info": {
+      "address": "New York, NY, USA",
+      "email": "d@domenic.me"
+    }
+  }
+}
+`;

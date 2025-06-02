@@ -1,0 +1,527 @@
+exports[`Entities exist, but the user is not in them 1`] = `
+{
+  "state": "pending",
+  "description": "@johndoetw has not signed up to participate",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console",
+  "context": "Participation",
+  "isNothing": true,
+  "longDescription": "@johndoetw does not appear to have signed the agreement, or be associated with an entity that has done so. Please sign it, or forward it to an authorized representative!"
+}
+`;
+
+exports[`Entities exist, but the user is not in them 2`] = `
+{
+  "state": "pending",
+  "description": "@johndoetw has not signed up to participate",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console&pull=120",
+  "context": "Participation",
+  "isNothing": true,
+  "longDescription": "@johndoetw does not appear to have signed the agreement, or be associated with an entity that has done so. Please sign it, or forward it to an authorized representative!"
+}
+`;
+
+exports[`Individual exists, but their username is spelled with a different case 1`] = `
+{
+  "state": "success",
+  "description": "@JANEdoetw has signed up to participate as an individual",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=JANEdoetw&repo=console",
+  "context": "Participation",
+  "isNothing": false,
+  "longDescription": "@JANEdoetw has signed up to participate as an individual. All is well; contribute at will!"
+}
+`;
+
+exports[`Individual exists, but their username is spelled with a different case 2`] = `
+{
+  "state": "success",
+  "description": "@JANEdoetw has signed up to participate as an individual",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=JANEdoetw&repo=console&pull=120",
+  "context": "Participation",
+  "isNothing": false,
+  "longDescription": "@JANEdoetw has signed up to participate as an individual. All is well; contribute at will!"
+}
+`;
+
+exports[`Individual, participating in all workstreams, unverified 1`] = `
+{
+  "state": "pending",
+  "description": "@johndoetw is not yet verified",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console",
+  "context": "Participation",
+  "isNothing": false,
+  "longDescription": "@johndoetw has signed up to participate as an individual, but has not yet been verified. Hold tight while we sort this out on our end! If you are a spec editor, follow <a href=\\"https://github.com/whatwg/participate.whatwg.org#process-for-editors\\">these instructions</a> to verify this individual."
+}
+`;
+
+exports[`Individual, participating in all workstreams, unverified 2`] = `
+{
+  "state": "pending",
+  "description": "@johndoetw is not yet verified",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console&pull=120",
+  "context": "Participation",
+  "isNothing": false,
+  "longDescription": "@johndoetw has signed up to participate as an individual, but has not yet been verified. Hold tight while we sort this out on our end! If you are a spec editor, follow <a href=\\"https://github.com/whatwg/participate.whatwg.org#process-for-editors\\">these instructions</a> to verify this individual."
+}
+`;
+
+exports[`Individual, participating in all workstreams, verified 1`] = `
+{
+  "state": "success",
+  "description": "@johndoetw has signed up to participate as an individual",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console",
+  "context": "Participation",
+  "isNothing": false,
+  "longDescription": "@johndoetw has signed up to participate as an individual. All is well; contribute at will!"
+}
+`;
+
+exports[`Individual, participating in all workstreams, verified 2`] = `
+{
+  "state": "success",
+  "description": "@johndoetw has signed up to participate as an individual",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console&pull=120",
+  "context": "Participation",
+  "isNothing": false,
+  "longDescription": "@johndoetw has signed up to participate as an individual. All is well; contribute at will!"
+}
+`;
+
+exports[`Individual, participating in other workstreams but not that one, unverified 1`] = `
+{
+  "state": "pending",
+  "description": "@johndoetw is not yet verified",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console",
+  "context": "Participation",
+  "isNothing": false,
+  "longDescription": "@johndoetw has signed up to participate as an individual, but has not yet been verified. Hold tight while we sort this out on our end! If you are a spec editor, follow <a href=\\"https://github.com/whatwg/participate.whatwg.org#process-for-editors\\">these instructions</a> to verify this individual."
+}
+`;
+
+exports[`Individual, participating in other workstreams but not that one, unverified 2`] = `
+{
+  "state": "pending",
+  "description": "@johndoetw is not yet verified",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console&pull=120",
+  "context": "Participation",
+  "isNothing": false,
+  "longDescription": "@johndoetw has signed up to participate as an individual, but has not yet been verified. Hold tight while we sort this out on our end! If you are a spec editor, follow <a href=\\"https://github.com/whatwg/participate.whatwg.org#process-for-editors\\">these instructions</a> to verify this individual."
+}
+`;
+
+exports[`Individual, participating in other workstreams but not that one, verified 1`] = `
+{
+  "state": "pending",
+  "description": "@johndoetw participates as an individual, but not in this workstream",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console",
+  "context": "Participation",
+  "isNothing": false,
+  "longDescription": "@johndoetw has signed up to participate as an individual, but has not chosen to participate in the Console workstream. To amend your agreement, submit a pull request to <a href=\\"https://github.com/whatwg/participant-data\\">whatwg/participant-data</a>."
+}
+`;
+
+exports[`Individual, participating in other workstreams but not that one, verified 2`] = `
+{
+  "state": "pending",
+  "description": "@johndoetw participates as an individual, but not in this workstream",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console&pull=120",
+  "context": "Participation",
+  "isNothing": false,
+  "longDescription": "@johndoetw has signed up to participate as an individual, but has not chosen to participate in the Console workstream. To amend your agreement, submit a pull request to <a href=\\"https://github.com/whatwg/participant-data\\">whatwg/participant-data</a>."
+}
+`;
+
+exports[`Individual, participating in that particular workstream, unverified 1`] = `
+{
+  "state": "pending",
+  "description": "@johndoetw is not yet verified",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console",
+  "context": "Participation",
+  "isNothing": false,
+  "longDescription": "@johndoetw has signed up to participate as an individual, but has not yet been verified. Hold tight while we sort this out on our end! If you are a spec editor, follow <a href=\\"https://github.com/whatwg/participate.whatwg.org#process-for-editors\\">these instructions</a> to verify this individual."
+}
+`;
+
+exports[`Individual, participating in that particular workstream, unverified 2`] = `
+{
+  "state": "pending",
+  "description": "@johndoetw is not yet verified",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console&pull=120",
+  "context": "Participation",
+  "isNothing": false,
+  "longDescription": "@johndoetw has signed up to participate as an individual, but has not yet been verified. Hold tight while we sort this out on our end! If you are a spec editor, follow <a href=\\"https://github.com/whatwg/participate.whatwg.org#process-for-editors\\">these instructions</a> to verify this individual."
+}
+`;
+
+exports[`Individual, participating in that particular workstream, verified 1`] = `
+{
+  "state": "success",
+  "description": "@johndoetw has signed up to participate as an individual",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console",
+  "context": "Participation",
+  "isNothing": false,
+  "longDescription": "@johndoetw has signed up to participate as an individual. All is well; contribute at will!"
+}
+`;
+
+exports[`Individual, participating in that particular workstream, verified 2`] = `
+{
+  "state": "success",
+  "description": "@johndoetw has signed up to participate as an individual",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console&pull=120",
+  "context": "Participation",
+  "isNothing": false,
+  "longDescription": "@johndoetw has signed up to participate as an individual. All is well; contribute at will!"
+}
+`;
+
+exports[`Individuals exist, but the user is not one of them 1`] = `
+{
+  "state": "pending",
+  "description": "@johndoetw has not signed up to participate",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console",
+  "context": "Participation",
+  "isNothing": true,
+  "longDescription": "@johndoetw does not appear to have signed the agreement, or be associated with an entity that has done so. Please sign it, or forward it to an authorized representative!"
+}
+`;
+
+exports[`Individuals exist, but the user is not one of them 2`] = `
+{
+  "state": "pending",
+  "description": "@johndoetw has not signed up to participate",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console&pull=120",
+  "context": "Participation",
+  "isNothing": true,
+  "longDescription": "@johndoetw does not appear to have signed the agreement, or be associated with an entity that has done so. Please sign it, or forward it to an authorized representative!"
+}
+`;
+
+exports[`Individuals exist, but the user is not one of them; it is an XSS attempt 1`] = `
+{
+  "state": "pending",
+  "description": "@<script>alert(1);</script> has not signed up to participate",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=<script>alert(1);</script>&repo=console",
+  "context": "Participation",
+  "isNothing": true,
+  "longDescription": "@&lt;script&gt;alert(1);&lt;/script&gt; does not appear to have signed the agreement, or be associated with an entity that has done so. Please sign it, or forward it to an authorized representative!"
+}
+`;
+
+exports[`Individuals exist, but the user is not one of them; it is an XSS attempt 2`] = `
+{
+  "state": "pending",
+  "description": "@<script>alert(1);</script> has not signed up to participate",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=<script>alert(1);</script>&repo=console&pull=120",
+  "context": "Participation",
+  "isNothing": true,
+  "longDescription": "@&lt;script&gt;alert(1);&lt;/script&gt; does not appear to have signed the agreement, or be associated with an entity that has done so. Please sign it, or forward it to an authorized representative!"
+}
+`;
+
+exports[`Multiple entities, all not in this workstream 1`] = `
+{
+  "state": "pending",
+  "description": "@johndoetw participates on behalf of a non-workstream entity",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console",
+  "context": "Participation",
+  "isNothing": false,
+  "longDescription": "@johndoetw is part of the contoso1 and contoso2 GitHub organizations, but they all do not participate in the Console workstream. Please have the contact for those organizations update their participation agreement."
+}
+`;
+
+exports[`Multiple entities, all not in this workstream 2`] = `
+{
+  "state": "pending",
+  "description": "@johndoetw participates on behalf of a non-workstream entity",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console&pull=120",
+  "context": "Participation",
+  "isNothing": false,
+  "longDescription": "@johndoetw is part of the contoso1 and contoso2 GitHub organizations, but they all do not participate in the Console workstream. Please have the contact for those organizations update their participation agreement."
+}
+`;
+
+exports[`Multiple entities, all unverified 1`] = `
+{
+  "state": "pending",
+  "description": "@johndoetw participates on behalf of an unverified entity",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console",
+  "context": "Participation",
+  "isNothing": false,
+  "longDescription": "@johndoetw is part of the contoso1 and contoso2 GitHub organizations, but they all have not yet been verified. Hold tight while we sort this out on our end! If you are a spec editor, follow <a href=\\"https://github.com/whatwg/participate.whatwg.org#process-for-editors\\">these instructions</a> to verify those organizations."
+}
+`;
+
+exports[`Multiple entities, all unverified 2`] = `
+{
+  "state": "pending",
+  "description": "@johndoetw participates on behalf of an unverified entity",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console&pull=120",
+  "context": "Participation",
+  "isNothing": false,
+  "longDescription": "@johndoetw is part of the contoso1 and contoso2 GitHub organizations, but they all have not yet been verified. Hold tight while we sort this out on our end! If you are a spec editor, follow <a href=\\"https://github.com/whatwg/participate.whatwg.org#process-for-editors\\">these instructions</a> to verify those organizations."
+}
+`;
+
+exports[`Multiple entities, one good option 1`] = `
+{
+  "state": "success",
+  "description": "johndoetw participates on behalf of Contoso 2",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console",
+  "context": "Participation",
+  "isNothing": false,
+  "longDescription": "@johndoetw is part of the contoso2 GitHub organization, associated with Contoso 2, which has signed the agreement and participates in the Console workstream. All is well; contribute at will!"
+}
+`;
+
+exports[`Multiple entities, one good option 2`] = `
+{
+  "state": "success",
+  "description": "johndoetw participates on behalf of Contoso 2",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console&pull=120",
+  "context": "Participation",
+  "isNothing": false,
+  "longDescription": "@johndoetw is part of the contoso2 GitHub organization, associated with Contoso 2, which has signed the agreement and participates in the Console workstream. All is well; contribute at will!"
+}
+`;
+
+exports[`Multiple entities, one participating and one not 1`] = `
+{
+  "state": "success",
+  "description": "johndoetw participates on behalf of Contoso 2",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console",
+  "context": "Participation",
+  "isNothing": false,
+  "longDescription": "@johndoetw is part of the contoso2 GitHub organization, associated with Contoso 2, which has signed the agreement and participates in the Console workstream. All is well; contribute at will!"
+}
+`;
+
+exports[`Multiple entities, one participating and one not 2`] = `
+{
+  "state": "success",
+  "description": "johndoetw participates on behalf of Contoso 2",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console&pull=120",
+  "context": "Participation",
+  "isNothing": false,
+  "longDescription": "@johndoetw is part of the contoso2 GitHub organization, associated with Contoso 2, which has signed the agreement and participates in the Console workstream. All is well; contribute at will!"
+}
+`;
+
+exports[`Multiple entities, one verified and one not 1`] = `
+{
+  "state": "success",
+  "description": "johndoetw participates on behalf of Contoso 2",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console",
+  "context": "Participation",
+  "isNothing": false,
+  "longDescription": "@johndoetw is part of the contoso2 GitHub organization, associated with Contoso 2, which has signed the agreement and participates in the Console workstream. All is well; contribute at will!"
+}
+`;
+
+exports[`Multiple entities, one verified and one not 2`] = `
+{
+  "state": "success",
+  "description": "johndoetw participates on behalf of Contoso 2",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console&pull=120",
+  "context": "Participation",
+  "isNothing": false,
+  "longDescription": "@johndoetw is part of the contoso2 GitHub organization, associated with Contoso 2, which has signed the agreement and participates in the Console workstream. All is well; contribute at will!"
+}
+`;
+
+exports[`Multiple entities, participating one unverified 1`] = `
+{
+  "state": "pending",
+  "description": "@johndoetw participates on behalf of a non-workstream entity",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console",
+  "context": "Participation",
+  "isNothing": false,
+  "longDescription": "@johndoetw is part of the contoso2 GitHub organization, but it does not participate in the Console workstream. Please have the contact for this organization update their participation agreement."
+}
+`;
+
+exports[`Multiple entities, participating one unverified 2`] = `
+{
+  "state": "pending",
+  "description": "@johndoetw participates on behalf of a non-workstream entity",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console&pull=120",
+  "context": "Participation",
+  "isNothing": false,
+  "longDescription": "@johndoetw is part of the contoso2 GitHub organization, but it does not participate in the Console workstream. Please have the contact for this organization update their participation agreement."
+}
+`;
+
+exports[`No data 1`] = `
+{
+  "state": "pending",
+  "description": "@johndoetw has not signed up to participate",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console",
+  "context": "Participation",
+  "isNothing": true,
+  "longDescription": "@johndoetw does not appear to have signed the agreement, or be associated with an entity that has done so. Please sign it, or forward it to an authorized representative!"
+}
+`;
+
+exports[`No data 2`] = `
+{
+  "state": "pending",
+  "description": "@johndoetw has not signed up to participate",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console&pull=120",
+  "context": "Participation",
+  "isNothing": true,
+  "longDescription": "@johndoetw does not appear to have signed the agreement, or be associated with an entity that has done so. Please sign it, or forward it to an authorized representative!"
+}
+`;
+
+exports[`Three entities 1`] = `
+{
+  "state": "pending",
+  "description": "@johndoetw participates on behalf of a non-workstream entity",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console",
+  "context": "Participation",
+  "isNothing": false,
+  "longDescription": "@johndoetw is part of the contoso1, contoso2, and contoso3 GitHub organizations, but they all do not participate in the Console workstream. Please have the contact for those organizations update their participation agreement."
+}
+`;
+
+exports[`Three entities 2`] = `
+{
+  "state": "pending",
+  "description": "@johndoetw participates on behalf of a non-workstream entity",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console&pull=120",
+  "context": "Participation",
+  "isNothing": false,
+  "longDescription": "@johndoetw is part of the contoso1, contoso2, and contoso3 GitHub organizations, but they all do not participate in the Console workstream. Please have the contact for those organizations update their participation agreement."
+}
+`;
+
+exports[`Via entity, participating in all workstreams, unverified 1`] = `
+{
+  "state": "pending",
+  "description": "@johndoetw participates on behalf of an unverified entity",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console",
+  "context": "Participation",
+  "isNothing": false,
+  "longDescription": "@johndoetw is part of the contoso GitHub organization, but it has not yet been verified. Hold tight while we sort this out on our end! If you are a spec editor, follow <a href=\\"https://github.com/whatwg/participate.whatwg.org#process-for-editors\\">these instructions</a> to verify this organization."
+}
+`;
+
+exports[`Via entity, participating in all workstreams, unverified 2`] = `
+{
+  "state": "pending",
+  "description": "@johndoetw participates on behalf of an unverified entity",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console&pull=120",
+  "context": "Participation",
+  "isNothing": false,
+  "longDescription": "@johndoetw is part of the contoso GitHub organization, but it has not yet been verified. Hold tight while we sort this out on our end! If you are a spec editor, follow <a href=\\"https://github.com/whatwg/participate.whatwg.org#process-for-editors\\">these instructions</a> to verify this organization."
+}
+`;
+
+exports[`Via entity, participating in all workstreams, verified 1`] = `
+{
+  "state": "success",
+  "description": "johndoetw participates on behalf of Contoso Ltd.",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console",
+  "context": "Participation",
+  "isNothing": false,
+  "longDescription": "@johndoetw is part of the contoso GitHub organization, associated with Contoso Ltd., which has signed the agreement and participates in the Console workstream. All is well; contribute at will!"
+}
+`;
+
+exports[`Via entity, participating in all workstreams, verified 2`] = `
+{
+  "state": "success",
+  "description": "johndoetw participates on behalf of Contoso Ltd.",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console&pull=120",
+  "context": "Participation",
+  "isNothing": false,
+  "longDescription": "@johndoetw is part of the contoso GitHub organization, associated with Contoso Ltd., which has signed the agreement and participates in the Console workstream. All is well; contribute at will!"
+}
+`;
+
+exports[`Via entity, participating in other workstreams but not that one, unverified 1`] = `
+{
+  "state": "pending",
+  "description": "@johndoetw participates on behalf of an unverified entity",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console",
+  "context": "Participation",
+  "isNothing": false,
+  "longDescription": "@johndoetw is part of the contoso GitHub organization, but it has not yet been verified. Hold tight while we sort this out on our end! If you are a spec editor, follow <a href=\\"https://github.com/whatwg/participate.whatwg.org#process-for-editors\\">these instructions</a> to verify this organization."
+}
+`;
+
+exports[`Via entity, participating in other workstreams but not that one, unverified 2`] = `
+{
+  "state": "pending",
+  "description": "@johndoetw participates on behalf of an unverified entity",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console&pull=120",
+  "context": "Participation",
+  "isNothing": false,
+  "longDescription": "@johndoetw is part of the contoso GitHub organization, but it has not yet been verified. Hold tight while we sort this out on our end! If you are a spec editor, follow <a href=\\"https://github.com/whatwg/participate.whatwg.org#process-for-editors\\">these instructions</a> to verify this organization."
+}
+`;
+
+exports[`Via entity, participating in other workstreams but not that one, verified 1`] = `
+{
+  "state": "pending",
+  "description": "@johndoetw participates on behalf of a non-workstream entity",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console",
+  "context": "Participation",
+  "isNothing": false,
+  "longDescription": "@johndoetw is part of the contoso GitHub organization, but it does not participate in the Console workstream. Please have the contact for this organization update their participation agreement."
+}
+`;
+
+exports[`Via entity, participating in other workstreams but not that one, verified 2`] = `
+{
+  "state": "pending",
+  "description": "@johndoetw participates on behalf of a non-workstream entity",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console&pull=120",
+  "context": "Participation",
+  "isNothing": false,
+  "longDescription": "@johndoetw is part of the contoso GitHub organization, but it does not participate in the Console workstream. Please have the contact for this organization update their participation agreement."
+}
+`;
+
+exports[`Via entity, participating in that particular workstream, unverified 1`] = `
+{
+  "state": "pending",
+  "description": "@johndoetw participates on behalf of an unverified entity",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console",
+  "context": "Participation",
+  "isNothing": false,
+  "longDescription": "@johndoetw is part of the contoso GitHub organization, but it has not yet been verified. Hold tight while we sort this out on our end! If you are a spec editor, follow <a href=\\"https://github.com/whatwg/participate.whatwg.org#process-for-editors\\">these instructions</a> to verify this organization."
+}
+`;
+
+exports[`Via entity, participating in that particular workstream, unverified 2`] = `
+{
+  "state": "pending",
+  "description": "@johndoetw participates on behalf of an unverified entity",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console&pull=120",
+  "context": "Participation",
+  "isNothing": false,
+  "longDescription": "@johndoetw is part of the contoso GitHub organization, but it has not yet been verified. Hold tight while we sort this out on our end! If you are a spec editor, follow <a href=\\"https://github.com/whatwg/participate.whatwg.org#process-for-editors\\">these instructions</a> to verify this organization."
+}
+`;
+
+exports[`Via entity, participating in that particular workstream, verified 1`] = `
+{
+  "state": "success",
+  "description": "johndoetw participates on behalf of Contoso Ltd.",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console",
+  "context": "Participation",
+  "isNothing": false,
+  "longDescription": "@johndoetw is part of the contoso GitHub organization, associated with Contoso Ltd., which has signed the agreement and participates in the Console workstream. All is well; contribute at will!"
+}
+`;
+
+exports[`Via entity, participating in that particular workstream, verified 2`] = `
+{
+  "state": "success",
+  "description": "johndoetw participates on behalf of Contoso Ltd.",
+  "target_url": "https://participate.whatwg.org/agreement-status?user=johndoetw&repo=console&pull=120",
+  "context": "Participation",
+  "isNothing": false,
+  "longDescription": "@johndoetw is part of the contoso GitHub organization, associated with Contoso Ltd., which has signed the agreement and participates in the Console workstream. All is well; contribute at will!"
+}
+`;

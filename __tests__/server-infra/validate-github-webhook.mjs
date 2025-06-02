@@ -1,10 +1,13 @@
-"use strict";
+import { before, test, mock } from "node:test";
 
-jest.mock("../../private-config.json", () => {
-  return { webhook: { secret: "hunter2" } };
-}, { virtual: true });
+let validateGitHubWebhook;
+before(async () => {
+  mock.module("../../private-config.json", {
+    defaultExport: { webhook: { secret: "hunter2" } }
+  });
 
-const validateGitHubWebhook = require("../../lib/server-infra/validate-github-webhook.js");
+  validateGitHubWebhook = (await import("../../lib/server-infra/validate-github-webhook.js")).default;
+});
 
 [
   {
@@ -71,11 +74,11 @@ const validateGitHubWebhook = require("../../lib/server-infra/validate-github-we
     }
   };
 
-  test(name, () => {
+  test(name, t => {
     if (expected === true) {
-      expect(validateGitHubWebhook(mockCtx, eventInput)).toEqual(expected);
+      t.assert.strictEqual(validateGitHubWebhook(mockCtx, eventInput), expected);
     } else {
-      expect(() => validateGitHubWebhook(mockCtx, eventInput)).toThrow(expected);
+      t.assert.throws(() => validateGitHubWebhook(mockCtx, eventInput), expected);
     }
   });
 });
