@@ -46,7 +46,7 @@ The above steps should automatically clone the [whatwg/sg](https://github.com/wh
 
 Follow the "[Creating Webhooks](https://developer.github.com/webhooks/creating/)" guide from GitHub for Living Standard repositories. The settings are:
 
-- URL: `/push-status-check` on this server
+- URL: `https://participate.whatwg.org/push-status-check`
 - Content type: `application/json`
 - Secret: the value you've set in your `private-config.json`
 - Choose "Select individual events" and choose "Pull request" only
